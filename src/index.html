@@ -11,35 +11,42 @@
       font-family: "Alegreya Sans", cursive, sans-serif;
     }
   </style>
+
   <body>
-    <div class="nav text-center">
-      <span class="heading"><a href="http://build-a-meal.net/" style="text-decoration:none; color:white; font-weight:bold">Build-A-Meal</a></span>
-      <a href="http://build-a-meal.net/"><img border="" alt="" src="assets/logo.png" width="40" height="40" class = 'side-image'></a>
+    <!--Configure the heading -->
+    <div class = "nav"
+    <span class="heading"><a href="http://build-a-meal.net/" style="font-size: 30px; text-decoration:none; color:black; font-weight:bold">Build-A-Meal</a></span>
+    <a class = "side-image" href="http://build-a-meal.net/"><img border="" alt="" src="assets/logo.png" width="40" height="40" ></a>
     </div>
 
-  <div class="main">
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-    <p>Some text some text some text some text..</p>
-  </div>
+    <!-- Configure the left scroll pane -->
+    <div class="left">
+      <!-- Search bar -->
+      <form autocomplete="off" action="/action_page.php">
+          <input type="submit" value="Add" style="float: right" />
+          <div style="overflow: hidden; padding-right: .5em;">
+             <input id = "myInput" input type="text" name="myIngredients" placeholder="Search" style="width: 97%">
+          </div>
+      </form>
+
+      <div class="ingredientList">
+        <h3>Ingredients List</h3>
+        <ul style="list-style-type:disc">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+      </div>
+
+      <p class="ex1">A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.A paragraph with a 10% left margin. The percentage is based on the width of the containing element.</p>
+
+    </div>
+
+    <!--Configure the right scroll pane -->
+    <div class="right">
+      <p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p><p>Right content</p>
+    </div>
+
 <!--End of page -->
   </body>
 </html>

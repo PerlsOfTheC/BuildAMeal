@@ -41,12 +41,6 @@ p.ex1 {
   overflow-y: scroll;
   width: 70%;
 }
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-  margin:5%
-}
 
 input {
   margin: 10px;
@@ -69,9 +63,11 @@ input[type=submit] {
   color: #fff;
   cursor: pointer;
 }
+
 h3 {
    text-decoration: underline;
 }
+
 .ingredientList {
   background-color: white;
   width: 70%;
@@ -82,6 +78,7 @@ h3 {
   margin: 7%;
   list-style-position: outside;
 }
+
 ul {
   list-style-position: outside;
   margin-left: 0px;
@@ -89,8 +86,14 @@ ul {
   padding-top: 0px;
 }
 
-}
 /* ---------------------- Autocomplete for search bar ---------------------- */
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  margin:5%
+}
+
 .autocomplete-items {
   position: absolute;
   border: 1px solid #d4d4d4;

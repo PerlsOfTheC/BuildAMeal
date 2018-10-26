@@ -42,6 +42,13 @@ p.ex1 {
   width: 70%;
 }
 
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  margin:5%
+}
+
 input {
   margin: 10px;
   font-family: "Alegreya Sans", cursive, sans-serif;
@@ -64,10 +71,59 @@ input[type=submit] {
   cursor: pointer;
 }
 
-h3 {
-   text-decoration: underline;
+.button {
+  background-color: #F6C47F;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  width:90%;
+  margin-bottom: 0px;
 }
 
+fieldset.group  {
+  margin: 0px;
+  margin-top:7px;
+  padding: 0;
+  margin-bottom: 0px;
+  border-color: #E8E9E3;
+  border-style: solid;
+}
+
+fieldset.group legend {
+  margin top: 10px;
+  margin-bottom: 0px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 100%;
+  color: black;
+  text-align: center;
+}
+
+ul.checkbox  {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  list-style: none;
+}
+
+ul li{
+ font-size:12px;
+ display:inline-block;
+}
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkbox li {
+  margin: 0 3px 0 3px !important;
+  flex-basis: calc(50% - 6px);
+}
 .ingredientList {
   background-color: white;
   width: 70%;
@@ -75,25 +131,28 @@ h3 {
   border-radius: 5px;
   padding: 20px;
   padding-top: 0px;
-  margin: 7%;
-  list-style-position: outside;
+  margin:auto;
+  margin-top:5px;
+
 }
 
-ul {
-  list-style-position: outside;
-  margin-left: 0px;
-  padding: 30;
-  padding-top: 0px;
+.delete {
+  background-color: light grey;
+  font-size:12px;
+  border: none;
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  width:50%;
+  margin-bottom: 5px;
+  margin-top: 0px;
 }
 
 /* ---------------------- Autocomplete for search bar ---------------------- */
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-  margin:5%
-}
-
 .autocomplete-items {
   position: absolute;
   border: 1px solid #d4d4d4;

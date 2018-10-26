@@ -167,6 +167,12 @@ ul li{
     text-align: center;
 }
 
+@media screen and (max-width: 600px) { /* Columns in footer will stack on top of each other if screen is less than 600px wide */
+    .column {
+        width: 100%;
+    }
+}
+
 /* ---------------------- Autocomplete for search bar ---------------------- */
 .autocomplete-items {
   position: absolute;

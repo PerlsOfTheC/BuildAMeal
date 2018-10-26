@@ -1,0 +1,199 @@
+/* ---------header--------*/
+.nav {
+  border: 3px ;
+  outline: #b3cccc solid 10px;
+  padding: 10px;
+  overflow: hidden;
+  top:0;
+  text-align: center;
+}
+.side-image {
+  float: left;
+}
+
+/* ---------left scroll bar--------*/
+.left {
+  margin-top: 75px;
+  background-color: #F4F7FA  ;
+  text-align: left;
+  height:84%;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  overflow-y: scroll;
+}
+
+/* ---------right scroll bar--------*/
+.right {
+  margin-top: 75px;
+  height:84%;
+  background-color: #eff2ef;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+  width: 70%;
+}
+
+/* ---------search bar--------*/
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  margin:5%
+}
+input {
+  margin: 10px;
+  font-family: "Alegreya Sans", cursive, sans-serif;
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: white;
+  width: 100%;
+  margin-right: 5%
+}
+input[type=submit] {
+  font-family: "Alegreya Sans", cursive, sans-serif;
+  background-color: #a7dba2;
+  color: #fff;
+  cursor: pointer;
+}
+.button {
+  background-color: #F6C47F;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  width:90%;
+  margin-bottom: 0px;
+}
+
+/* ---------the ingredients list--------*/
+fieldset.group  {
+  margin: 0px;
+  margin-top:7px;
+  padding: 0;
+  margin-bottom: 0px;
+  border-color: #E8E9E3;
+  border-style: solid;
+}
+fieldset.group legend {
+  margin top: 10px;
+  margin-bottom: 0px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 100%;
+  color: black;
+  text-align: center;
+}
+ul.checkbox  {
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  list-style: none;
+}
+ul li{
+ font-size:12px;
+ display:inline-block;
+}
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkbox li {
+  margin: 0 3px 0 3px !important;
+  flex-basis: calc(50% - 6px);
+}
+.ingredientList {
+  background-color: white;
+  width: 70%;
+  border: 2px solid #ffd999;
+  border-radius: 5px;
+  padding: 20px;
+  padding-top: 0px;
+  margin: auto;
+  margin-top:5px;
+}
+.delete {
+  background-color: light grey;
+  font-size:12px;
+  border: none;
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  width:50%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* ---------footer--------*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+.footerContent {
+  margin-left: 3%;
+  margin-top: -4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.column {
+    float: left;
+    width: 21.5%;
+    padding: 15px;
+    height: 20px;
+    text-align: center;
+}
+
+/* ---------------------- Autocomplete for search bar ---------------------- */
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}

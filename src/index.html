@@ -49,7 +49,7 @@
       <!-- Search bar -->
       <form autocomplete="off" action="/action_page.php">
         <button class="add" style="float: right" ><span> Add </span></button>
-        <button class="help" style="float: right" ><span> ? </span></button>
+        <button class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below, and click to add to the ingredients list. </span></span></button>
           <div style="overflow: hidden; padding-right: .5em;">
              <input id = "myInput" input type="text" name="myIngredients" placeholder="Search" style="width: 97%">
           </div>
@@ -72,13 +72,20 @@
         <span class = "footerContent"><img src="https://seeklogo.com/images/G/google-slides-logo-1B083B4C03-seeklogo.com.png" alt="Presentation" width="20" height="20"></span><span>&nbsp;&nbsp;<a href="https://goo.gl/dT2pkH" style="text-decoration:none; color:black">See our presentation!</a></span>
       </div>
       <div class="column">
-        <span class = "footerContent"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20" height="20"></span><span> <a href="https://goo.gl/dT2pkH" style="text-decoration:none; color:black"> &nbsp;Watch us in action!</a></span>
+        <span class = "footerContent"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20" height="20"></span><span> <a href="https://github.com/PerlsOfTheC/BuildAMeal" style="text-decoration:none; color:black"> &nbsp;Watch us in action!</a></span>
       </div>
       <div class="column">
-        <span class = "footerContent"><img src="assets/logo.png" alt="Team Page" width="20" height="20" ></span><span> <a href="https://goo.gl/dT2pkH" style="text-decoration:none; color:black ; margin-left:0%">&nbsp;Visit our team page!</a></span>
+        <span class = "footerContent"><img src="assets/logo.png" alt="Team Page" width="20" height="20" ></span><span> <a href="https://github.com/cs480-projects/cs480-projects.github.io/blob/master/teams-fall2018/PerlsOfTheC/index.html" style="text-decoration:none; color:black ; margin-left:0%">&nbsp;Visit our team page!</a></span>
       </div>
     </div>
     </div>
+    <script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+    </script>
 
 <!--End of page -->
   </body>

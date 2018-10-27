@@ -159,13 +159,38 @@ input[type=text] {
   color: #fff;
   cursor: pointer;
   margin: 10px;
-  margin-right: 0%
+  margin-left: 2px;
+  margin-right: 4px;
   border: 1px solid transparent;
-  padding: 10px;
+  padding: 6px;
+  padding-right: 10px;
   font-size: 14px;
-  width:5%%
+  width:5%;
+  text-align: center;
+  height:41px;
 }
+.tooltip {
+    position: relative;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 /* ---------animated effect for buttons--------*/
 .findRecipes span, .remove span, .add span{
   cursor: pointer;

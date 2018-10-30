@@ -1,22 +1,32 @@
-/* ---------header--------*/
-.nav {
-  border: 3px ;
-  outline: #b3cccc solid 10px;
-  padding: 10px;
-  overflow: hidden;
-  top:0;
-  text-align: center;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
-.side-image {
-  float: left;
+
+/* ---------header--------*/
+.heading {
+  margin: 0px;
+  height:9vh;
+  text-align: center;
+  background-color: white;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.75vh solid #b3cccc;
 }
 
 /* ---------left scroll bar--------*/
+
 .left {
-  margin-top: 75px;
+  margin-top: 10vh;
   background-color: #F4F7FA  ;
   text-align: left;
-  height:84%;
+  height:80vh;
   position: absolute;
   top: 0px;
   bottom: 0;
@@ -27,8 +37,8 @@
 
 /* ---------right scroll bar--------*/
 .right {
-  margin-top: 75px;
-  height:84%;
+  margin-top: 10vh;
+  height:80vh;
   background-color: #eff2ef;
   text-align: left;
   position: absolute;
@@ -44,11 +54,11 @@
   background-color: #F6C47F;
   border: none;
   color: white;
-  padding: 15px 15px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   margin: 10px 10px;
   cursor: pointer;
   width:90%;
@@ -154,20 +164,18 @@ input[type=text] {
 }
 .help {
   font-family: "Alegreya Sans", cursive, sans-serif;
-  background-color: light grey;
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
+  background-color: #C0C0C0;
+  color: white;
   margin: 10px;
   margin-left: 2px;
   margin-right: 4px;
-  border: 1px solid transparent;
+  justify-content: center;
+  align-items: center;
   padding: 6px;
-  padding-right: 10px;
-  font-size: 14px;
-  width:5%;
+  padding-right: 6px;
   text-align: center;
-  height:41px;
+  height:29px;
+  font-size: 25px;
 }
 .tooltip {
   position: relative;
@@ -180,8 +188,9 @@ input[type=text] {
   text-align: center;
   border-radius: 6px;
   padding: 5px;
+  font-size: 14px;
 
-    /* Position the tooltip */
+  /* Position the tooltip */
   position: absolute;
   z-index: 1;
   bottom: 100%;
@@ -190,6 +199,15 @@ input[type=text] {
 }
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+/*---------- filtersOn textbox ----------*/
+.filtersOn {
+  margin:5%;
+  background-color: white;
+}
+.filtersText {
+  padding: 2%;
+  font-weight: bold;
 }
 /* ---------animated effect for buttons--------*/
 .findRecipes span, .remove span, .add span{
@@ -269,7 +287,7 @@ input[type=text] {
     float: left;
     width: 21.5%;
     padding: 15px;
-    height: 20px;
+    height: 2vh;
     text-align: center;
 }
 @media screen and (max-width: 600px) { /* Columns in footer will stack on top of each other if screen is less than 600px wide */

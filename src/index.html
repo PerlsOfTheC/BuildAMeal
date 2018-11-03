@@ -54,23 +54,6 @@
         </div>
       </div>
 
-    <script>
-      function addToCheckBox() {
-        // var val = $('#myInput').val();
-        // $('#ingredientCheckbox').append(val + "\n");
-        // $('#myInput').val('').focus();
-        var ul = document.getElementById("ingredientCheckbox");
-        var li = document.createElement("li");
-        var children = ul.children.length + 1;
-
-        li.setAttribute("id", "element"+children);
-        var val = $('#myInput').val();
-        li.appendChild(document.createTextNode(val));
-        ul.appendChild(li);
-         $('#myInput').val('').focus();
-      }
-    </script>
-
       <!-- Search bar -->
         <button class="add" onclick="addToCheckBox()"  style="float: right" ><span> Add </span></button>
         <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below, and click to add to the ingredients list. </span></span></span>

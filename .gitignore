@@ -46,5 +46,9 @@ Thumbs.db
 # Env file
 *.env
 
-# Yarn
-.lock
+# lock files
+/yarn.lock
+/package-lock.json
+
+# keys
+api_keys.js

@@ -46,6 +46,7 @@ Thumbs.db
 # Env file
 *.env
 *.env.*
+.env.example
 
 # lock files
 /yarn.lock

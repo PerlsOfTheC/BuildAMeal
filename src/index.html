@@ -44,62 +44,155 @@
             <!--<li><input type="checkbox" id="cb8" value="pepperoni" /><label for="cb1"></label></li>-->
             <!--<li><input type="checkbox" id="cb9" value="pepperoni" /><label for="cb1"></label></li>-->
             <!--<li><input type="checkbox" id="cb10" value="pepperoni" /><label for="cb1"></label></li>-->
-            <button class="remove"><span> remove </span></button>
           </ul>
         </fieldset>
       </div>
       <div class = "filtersOn">
         <div class = "filtersText">
           Filters Applied:
+          <ul id = "filterSelection">
+          </ul>
         </div>
       </div>
 
       <!-- Search bar -->
         <button class="add" onclick="addToCheckBox()"  style="float: right" ><span> Add </span></button>
-        <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below, and click to add to the ingredients list. </span></span></span>
+        <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below and click to add to the ingredients list, or search. </span></span></span>
           <div style="overflow: hidden; padding-right: .5em;">
              <input type="text" id="myInput" name="myIngredients" placeholder="Search" style="width: 97%">
           </div>
 
       <!--filtering selection -->
-      <button class="accordion" style = background:#D1DEB3 >Protein &nbsp&nbsp&nbsp<img src = "assets/meat.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#D1DEB3 >Protein<img src = "assets/meat.png" height="20" width="20" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions">Beef</button>
+        <button class="foodOptions">Chicken</button>
+        <button class="foodOptions">Pork</button>
+        <button class="foodOptions">Turkey</button>
+        <button class="foodOptions">Shrimp</button>
+        <button class="foodOptions">Lamb</button>
+        <button class="foodOptions">Salmon</button>
+        <button class="foodOptions">Oyster</button>
+        <button class="foodOptions">Clam</button>
+        <button class="foodOptions">Lobster</button>
+        <button class="foodOptions">Crab</button>
       </div>
 
-      <button class="accordion" style = background:#D2E6CC >Vegetables&nbsp&nbsp&nbsp&nbsp<img src = "assets/vegetable.png" height="18" width="18" align= "right"></button>
+      <button class="accordion" style = background:#D2E6CC >Vegetable<img src = "assets/vegetable.png" height="18" width="18" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions">Broccoli</button>
+        <button class="foodOptions">Carrot</button>
+        <button class="foodOptions">Cucumber</button>
+        <button class="foodOptions">Potato</button>
+        <button class="foodOptions">Corn</button>
+        <button class="foodOptions">Tomato</button>
+        <button class="foodOptions">Spinach</button>
+        <button class="foodOptions">Zucchini</button>
+        <button class="foodOptions">Lettuce</button>
+        <button class="foodOptions">Kale</button>
+        <button class="foodOptions">Brussel Sprouts</button>
+        <button class="foodOptions">Celery</button>
+        <button class="foodOptions">Eggplant</button>
+        <button class="foodOptions">Onion</button>
       </div>
 
-      <button class="accordion" style = background:#D7E7E2>Spices&nbsp&nbsp&nbsp&nbsp<img src = "assets/spices.png" height="18" width="18" align= "right"></button>
+      <button class="accordion" style = background:#D7E7E2>Spices/Herbs<img src = "assets/spices.png" height="18" width="18" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions">Allspice</button>
+        <button class="foodOptions">Bay Leaf</button>
+        <button class="foodOptions">Basil</button>
+        <button class="foodOptions">Cardamom</button>
+        <button class="foodOptions">Cayenne Pepper</button>
+        <button class="foodOptions">Cilantro</button>
+        <button class="foodOptions">Cinnamon</button>
+        <button class="foodOptions">Cloves</button>
+        <button class="foodOptions">Coriander Seed</button>
+        <button class="foodOptions">Cumin</button>
+        <button class="foodOptions">Fennel Seed</button>
+        <button class="foodOptions">Mint</button>
+        <button class="foodOptions">Nutmeg</button>
+        <button class="foodOptions">Oregano</button>
+        <button class="foodOptions">Rosemary</button>
+        <button class="foodOptions">Sage</button>
+        <button class="foodOptions">Paprika</button>
+        <button class="foodOptions">Tumeric</button>
+        <button class="foodOptions">Thyme</button>
       </div>
 
-      <button class="accordion" style = background:#D9D3BF >Allergies&nbsp&nbsp&nbsp<img src = "assets/allergies.png" height="18" width="18" align= "right"></button>
+      <button class="accordion" style = background:#D9D3BF >Allergies<img src = "assets/allergies.png" height="18" width="18" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions">Dairy</button>
+        <button class="foodOptions">Egg</button>
+        <button class="foodOptions">Gluten</button>
+        <button class="foodOptions">Peanut</button>
+        <button class="foodOptions">Seafood</button>
+        <button class="foodOptions">Sesame</button>
+        <button class="foodOptions">Soy</button>
+        <button class="foodOptions">Sulfite</button>
+        <button class="foodOptions">Tree Nut</button>
+        <button class="foodOptions">Wheat</button>
       </div>
 
-      <button class="accordion" style = background:#F6EECC >Dietary Restrictions&nbsp&nbsp&nbsp<img src = "assets/dietaryRestrictions.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#F6EECC >Dietary Restrictions<img src = "assets/dietaryRestrictions.png" height="20" width="20" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions" id = "lacto" value="Lacto Vegetarian" onclick="addDietFilter(this.id)">Lacto Vegetarian</button>
+        <button class="foodOptions" id = "ovo" value="Ovo Vegetarian" onclick="addDietFilter(this.id)">Ovo Vegetarian</button>
+        <button class="foodOptions" id = "pesc" value="Pescatarian" onclick="addDietFilter(this.id)">Pescatarian</button>
+        <button class="foodOptions" id = "vegan" value="Vegan" onclick="addDietFilter(this.id)">Vegan</button>
+        <button class="foodOptions" id = "veg" value="Vegetarian" onclick="addDietFilter(this.id)">Vegetarian</button>
       </div>
 
-      <button class="accordion" style = background:#FFF4E9 >Cuisine&nbsp&nbsp&nbsp<img src = "assets/cuisine.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#FFF4E9 >Cuisine<img src = "assets/cuisine.png" height="20" width="20" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions">American</button>
+        <button class="foodOptions">Italian</button>
+        <button class="foodOptions">Asian</button>
+        <button class="foodOptions">Mexican</button>
+        <button class="foodOptions">Southern & Soul Food</button>
+        <button class="foodOptions">French</button>
+        <button class="foodOptions">Southwestern</button>
+        <button class="foodOptions">Barbecue</button>
+        <button class="foodOptions">Indian</button>
+        <button class="foodOptions">Chinese</button>
+        <button class="foodOptions">Cajun & Creole</button>
+        <button class="foodOptions">English</button>
+        <button class="foodOptions">Mediterranean</button>
+        <button class="foodOptions">Greek</button>
+        <button class="foodOptions">Spanish</button>
+        <button class="foodOptions">German</button>
+        <button class="foodOptions">Thai</button>
+        <button class="foodOptions">Moroccan</button>
+        <button class="foodOptions">Irish</button>
+        <button class="foodOptions">Japanese</button>
+        <button class="foodOptions">Cuban</button>
+        <button class="foodOptions">Hawaiin</button>
+        <button class="foodOptions">Swedish</button>
+        <button class="foodOptions">Hungarian</button>
+        <button class="foodOptions">Portugese</button>
       </div>
 
-      <button class="accordion" style = background:#CBBBCE >Course&nbsp&nbsp&nbsp<img src = "assets/course.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#CBBBCE >Course<img src = "assets/course.png" height="20" width="20" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions">Main Dishes</button>
+        <button class="foodOptions">Desserts</button>
+        <button class="foodOptions">Side Dishes</button>
+        <button class="foodOptions">Lunch and Snacks</button>
+        <button class="foodOptions">Appetizers</button>
+        <button class="foodOptions">Salads</button>
+        <button class="foodOptions">Breads</button>
+        <button class="foodOptions">Breakfast and Brunch</button>
+        <button class="foodOptions">Soups</button>
+        <button class="foodOptions">Beverages</button>
+        <button class="foodOptions">Condiments and Sauces</button>
+        <button class="foodOptions">Cocktails</button>
       </div>
 
-      <button class="accordion" style = background:#E9DDE7 >Cooking Time&nbsp&nbsp&nbsp<img src = "assets/time.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#E9DDE7 >Prep + Cook Time<img src = "assets/time.png" height="20" width="20" align= "right"></button>
       <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="foodOptions" id = "30mins" value="Max of 30 minutes" onclick="addTimeFilter(this.id)">Max of 30 mins.</button>
+        <button class="foodOptions" id = "1hr" value="Max of 1 hour" onclick="addTimeFilter(this.id)">Max of 1 hour</button>
+        <button class="foodOptions" id = "1.5hr" value="Max of 1.5 hours" onclick="addTimeFilter(this.id)">Max of 1.5 hours</button>
+        <button class="foodOptions" id = "2hr" value="Max of 2 hours" onclick="addTimeFilter(this.id)">Max of 2 hours</button>
       </div>
 
       <div class = "filler"> &nbsp</div>

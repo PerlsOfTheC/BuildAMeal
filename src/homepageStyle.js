@@ -1,3 +1,5 @@
+var timeFilterOn = false;
+var dietFilterOn = false;
 $("document").ready(function() {
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -28,4 +30,25 @@ function addToCheckBox() {
   li.appendChild(document.createTextNode(val));
   ul.appendChild(li);
    $('#myInput').val('').focus();
+}
+
+function addTimeFilter(timeID) {
+  //Limits time filter to 1 option
+  if (timeFilterOn == false) {
+    var li = document.createElement("BUTTON");
+    var textnode = document.createTextNode(document.getElementById(timeID).value);
+    li.appendChild(textnode);
+    document.getElementById("filterSelection").appendChild(li);
+    timeFilterOn = true;
+  }
+}
+
+function addDietFilter(dietID) {
+  if (dietFilterOn == false) {
+    var li = document.createElement("BUTTON");
+    var textnode = document.createTextNode(document.getElementById(dietID).value);
+    li.appendChild(textnode);
+    document.getElementById("filterSelection").appendChild(li);
+    dietFilterOn = true;
+  }
 }

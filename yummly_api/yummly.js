@@ -171,11 +171,10 @@ function searchForRecipe(ingredientList) {
 
 }
 
-// TODO: Add timeout, figure out out to get specific data from JSON
+// TODO: Add timeout
 function getRecipes(url, cb) {
   var options = {
-    url: url,
-    json: true
+    url: url
   };
 
   function callback(error, response, body) {
@@ -184,7 +183,8 @@ function getRecipes(url, cb) {
       cb(info);
       // console.log(body);
     } else {
-      return callback(error)
+       console.log("error: " + error);
+      return callback(error);
     }
   }
 
@@ -199,8 +199,15 @@ searchQ = searchForRecipe(['onion', 'carrot', 'milk', 'brown sugar'])
   .requiredCuisines('American')
   .getURL();
 
-getRecipes(searchQ, function(recipe) {
-  console.log(recipe);
+// getRecipes(searchQ, function(recipe) {
+//   console.log(recipe);
+// });
+
+// THIS IS HOW TO GET specific data from the JSON request
+getRecipes(searchQ, function(get) {
+  get.matches.forEach(function(recipe) {
+    console.log(recipe.id);
+  });
 });
 // async function fetchRecipes(search) {
 //   try {

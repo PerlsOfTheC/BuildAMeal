@@ -1,13 +1,9 @@
 require('dotenv').config();
-
 const request = require('request');
 
 
 yummlyKey = process.env.YUMMLY_API_KEY;
 yummlyID = process.env.YUMMLY_API_ID;
-//Debugging
-console.log("MY_VARIABLE: " + yummlyKey);
-console.log("OTHER_VARIABLE: " + yummlyID);
 
 if (typeof yummlyKey !== 'undefined' && typeof yummlyID !== 'undefined') {
   var appQuery = '?_app_id=' + yummlyID + '&_app_key=' + yummlyKey;
@@ -163,6 +159,14 @@ function searchForRecipe(ingredientList) {
         return this;
       },
 
+      minRating: function(input) {
+        if (typeof input === 'number') {
+            url += '&minRating=' + input;
+          }
+
+        return this;
+      },
+
       getURL: function () {
         return url;
       }
@@ -191,40 +195,20 @@ function getRecipes(url, cb) {
   request(options, callback);
 }
 
-
-console.log(searchForRecipe(['milk', 'eggs', 'chicken']));
-
 searchQ = searchForRecipe(['onion', 'carrot', 'milk', 'brown sugar'])
   .maxResults(4)
   .requiredCuisines('American')
   .getURL();
 
-// getRecipes(searchQ, function(recipe) {
-//   console.log(recipe);
-// });
-
 // THIS IS HOW TO GET specific data from the JSON request
 getRecipes(searchQ, function(get) {
   get.matches.forEach(function(recipe) {
-    console.log(recipe.id);
+    console.log(recipe.recipeName);
+    console.log(recipe.ingredients);
   });
 });
-// async function fetchRecipes(search) {
-//   try {
-//     let recipes = await search.getRecipes();
-//     return recipes;
-//   } catch(err) {
-//     throw err;
-//   }
-// }
 
-// console.log("Checking json printing: " + JSON.stringify(searchQ));
-
-
-function getMetadata(url) {
-
-}
-
+//TODO: getDetails will return recipe details based on an ID
 function getDetails(recipeID) {
 
 }

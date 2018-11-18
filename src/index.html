@@ -25,7 +25,7 @@
     <!-- Configure the left scroll pane -->
     <div class="left">
       <div style="text-align: center">
-        <button class="findRecipes"><span>Find me recipes! </span></button>
+        <button class = "findRecipes" onclick = "displayBanner()"><span>Find me recipes! </span></button>
       </div>
 
       <!--Ingredients List -->
@@ -34,16 +34,6 @@
           <legend>Ingredients List</legend>
 
           <ul class="checkbox" id="ingredientCheckbox">
-            <!--<li><input type="checkbox" id="cb1" value="pepperoni" /><label for="cb1"></label></li>-->
-            <!--<li><input type="checkbox" id="cb2" value="sausage" /><label for="cb2"></label></li>-->
-            <!--<li><input type="checkbox" id="cb3" value="mushrooms" /><label for="cb3"></label></li>-->
-            <!--<li><input type="checkbox" id="cb4" value="onions" /><label for="cb4"></label></li>-->
-            <!--<li><input type="checkbox" id="cb5" value="gpeppers" /><label for="cb5"></label></li>-->
-            <!--<li><input type="checkbox" id="cb6" value="xcheese" /><label for="cb6>"></label></li>-->
-            <!--<li><input type="checkbox" id="cb7" value="pepperoni" /><label for="cb1"></label></li>-->
-            <!--<li><input type="checkbox" id="cb8" value="pepperoni" /><label for="cb1"></label></li>-->
-            <!--<li><input type="checkbox" id="cb9" value="pepperoni" /><label for="cb1"></label></li>-->
-            <!--<li><input type="checkbox" id="cb10" value="pepperoni" /><label for="cb1"></label></li>-->
           </ul>
         </fieldset>
       </div>
@@ -63,7 +53,7 @@
           </div>
 
       <!--filtering selection -->
-      <button class="accordion" style = background:#D1DEB3 >Protein<img src = "assets/meat.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#D1DEB3 >Protein<img src = "assets/meat.png" height="20" width="20" hspace="3" align= "right"></button>
       <div class="panel">
         <button class="foodOptions">Beef</button>
         <button class="foodOptions">Chicken</button>
@@ -78,7 +68,7 @@
         <button class="foodOptions">Crab</button>
       </div>
 
-      <button class="accordion" style = background:#D2E6CC >Vegetable<img src = "assets/vegetable.png" height="18" width="18" align= "right"></button>
+      <button class="accordion" style = background:#D2E6CC >Vegetable<img src = "assets/vegetable.png" height="18" width="18" hspace="3" align= "right"></button>
       <div class="panel">
         <button class="foodOptions">Broccoli</button>
         <button class="foodOptions">Carrot</button>
@@ -96,7 +86,7 @@
         <button class="foodOptions">Onion</button>
       </div>
 
-      <button class="accordion" style = background:#D7E7E2>Spices/Herbs<img src = "assets/spices.png" height="18" width="18" align= "right"></button>
+      <button class="accordion" style = background:#D7E7E2>Spices/Herbs<img src = "assets/spices.png" height="18" width="18" hspace="3" align= "right"></button>
       <div class="panel">
         <button class="foodOptions">Allspice</button>
         <button class="foodOptions">Bay Leaf</button>
@@ -119,7 +109,7 @@
         <button class="foodOptions">Thyme</button>
       </div>
 
-      <button class="accordion" style = background:#D9D3BF >Allergies<img src = "assets/allergies.png" height="18" width="18" align= "right"></button>
+      <button class="accordion" style = background:#D9D3BF >Allergies<img src = "assets/allergies.png" height="18" width="18" hspace="3" align= "right"></button>
       <div class="panel">
         <button class="foodOptions">Dairy</button>
         <button class="foodOptions">Egg</button>
@@ -133,7 +123,7 @@
         <button class="foodOptions">Wheat</button>
       </div>
 
-      <button class="accordion" style = background:#F6EECC >Dietary Restrictions<img src = "assets/dietaryRestrictions.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#F6EECC >Dietary Restrictions<img src = "assets/dietaryRestrictions.png" height="18" width="18" hspace="3" align= "right"></button>
       <div class="panel">
         <button class="foodOptions" id = "lacto" value="Lacto Vegetarian" onclick="addDietFilter(this.id)">Lacto Vegetarian</button>
         <button class="foodOptions" id = "ovo" value="Ovo Vegetarian" onclick="addDietFilter(this.id)">Ovo Vegetarian</button>
@@ -200,21 +190,10 @@
 
     <!--Configure the right scroll pane -->
     <div class="right">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class = "bannerBackground">
+        <p id = "bannerIngredients" style="margin:5px;" > &nbsp Showing Results for: </p>
+        <p id = "bannerFilters" style="margin:5px;"> &nbsp Filters Applied:</p>
+      </div>
     </div>
 
     <div class="footer">

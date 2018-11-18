@@ -34,19 +34,6 @@ html, body {
   overflow-y: scroll;
 }
 
-/* ---------right scroll bar--------*/
-.right {
-  margin-top: 10vh;
-  height:90vh;
-  background-color: #eff2ef;
-  text-align: left;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  overflow-y: scroll;
-  width: 70%;
-}
 
 /* ---------Find me recipes!--------*/
 .findRecipes {
@@ -291,6 +278,28 @@ input[type=text] {
     height: 2vh;
     text-align: center;
 }
+.bannerBackground {
+  margin-top: 10px;
+  background-color: white;
+  border-style: solid;
+  border-color: #D0D0D0;
+  border-width: 2px;
+}
+
+/* ---------right scroll bar--------*/
+.right {
+  margin-top: 10vh;
+  height:90vh;
+  background-color: #eff2ef;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+  width: 70%;
+}
+
 @media screen and (max-width: 600px) { /* Columns in footer will stack on top of each other if screen is less than 600px wide */
     .column {
         width: 100%;

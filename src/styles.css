@@ -77,7 +77,7 @@ ul.checkbox  {
   list-style: none;
 }
 ul li{
- font-size:12px;
+ font-size:14px;
  display:inline-block;
 }
 .checkbox {
@@ -177,7 +177,6 @@ input[type=text] {
 }
 .filtersText {
   padding: 2%;
-  font-weight: bold;
 }
 
 /* ---------animated effect for buttons--------*/

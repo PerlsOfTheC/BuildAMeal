@@ -176,7 +176,7 @@ function searchForRecipe(ingredientList) {
 }
 
 // TODO: Add timeout
-function getRecipes(url, cb) {
+function getJSON(url, cb) {
   var options = {
     url: url
   };
@@ -195,20 +195,70 @@ function getRecipes(url, cb) {
   request(options, callback);
 }
 
-searchQ = searchForRecipe(['onion', 'carrot', 'milk', 'brown sugar'])
-  .maxResults(4)
+
+ingredientsList = ['onion', 'carrot', 'milk'];
+searchQ = searchForRecipe(ingredientsList)
+  .requiredIngredients(ingredientsList)
+  .maxResults(5)
   .requiredCuisines('American')
   .getURL();
 
+var recipeIDQueue = [];
 // THIS IS HOW TO GET specific data from the JSON request
-getRecipes(searchQ, function(get) {
-  get.matches.forEach(function(recipe) {
-    console.log(recipe.recipeName);
-    console.log(recipe.ingredients);
-  });
-});
+//TODO: Fix issue with adding values to array
+// getJSON(searchQ, function(get) {
+//   get.matches.forEach(function(recipe) {
+    // recipeIDQueue.push(JSON.parse(recipe.id));
+    // console.log(recipe.recipeName);
+    // console.log(recipe.id);
+    // console.log(recipe.ingredients);
+    // console.log(recipe);
+  // });
+// });
 
-//TODO: getDetails will return recipe details based on an ID
-function getDetails(recipeID) {
+function getRecipeURLs(input) {
+  var recipeUrlQueue = [];
 
+  if (Array.isArray(input)) {
+    for (var i = 0; i < input.length; i++) {
+      url = Config.endpoints.recipeUrl;
+      url += input[i];
+      url += appQuery;
+      recipeUrlQueue.push(url);
+      // recipeDetailQueue.push(getJSON(url, null))
+    }
+  }
+
+  else if (typeof input === 'string') {
+    url = Config.endpoints.recipeUrl;
+    url += input;
+    url += appQuery;
+    recipeUrlQueue.push(url);
+    // recipeDetailQueue.push(getJSON(url, null))
+  }
+
+  if (recipeUrlQueue.length) {
+    return recipeUrlQueue;
+  } else {
+    return null;
+  }
+
+}
+
+// if (recipeIDQueue.length) {
+//   for (let recipeID of recipeIDQueue) {
+//     console.log(recipeID);
+//   }
+// } else {
+//   console.log('problem with recipeIDQueue')
+// }
+
+recipeIDQueue = ['Southern-Chicken-and-Corn-Chowder-1067232', 'Roasted-Garlic_potato-Soup-My-Recipes', 'Turkey-Meatloaf-2505129'];
+recipeUrlQueue = getRecipeURLs(recipeIDQueue);
+if (typeof recipeUrlQueue != null) {
+  for (let recipeUrl of recipeUrlQueue) {
+    console.log(recipeUrl);
+  }
+} else {
+  console.log("Nothing in recipeURL")
 }

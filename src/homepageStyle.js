@@ -1,6 +1,4 @@
-// Need function to delete elements and update var values
-// Prevent duplicates when searching
-// Sort by minimum rating OR alphabetical order
+
 var resultFilter = [];
 var resultIngredients = [];
 var timeFilterOn = false;
@@ -23,18 +21,36 @@ $("document").ready(function() {
 });
 
 function addToCheckBox() {
-  // var val = $('#myInput').val();
-  // $('#ingredientCheckbox').append(val + "\n");
-  // $('#myInput').val('').focus();
   var ul = document.getElementById("ingredientCheckbox");
   var li = document.createElement("li");
-  var children = ul.children.length + 1;
+  var val = toTitleCase($('#myInput').val().toLowerCase());
 
-  li.setAttribute("id", "element"+children);
-  var val = $('#myInput').val();
-  li.appendChild(document.createTextNode(val));
-  ul.appendChild(li);
-   $('#myInput').val('').focus();
+  // if valid ingredient
+  // if (VAL IS A VALID INGREDIENT) {
+  //   if (resultIngredients.indexOf(val) > -1) {
+  //     $('#myInput').val('ERROR: Cannot add duplicate ingredients.').focus();
+  //   }
+  //   else if (resultIngredients.length == 10) {
+  //     $('#myInput').val('Max of 10 ingredients reached.').focus()
+  //   }
+  //   else { // only push if valid ingredient, not already in ingredients List && max not reached
+  //     resultIngredients.push(val);
+  //     li.onclick = function deleteItem() {
+  //        this.parentNode.removeChild(this);
+  //        var index = resultIngredients.indexOf(this.innerHTML);
+  //        resultIngredients.splice(index,1);
+  //    }
+  //     li.appendChild(document.createTextNode(val));
+  //     ul.appendChild(li);
+  //     $('#myInput').val('').focus();
+  //   }
+  // }
+}
+
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 }
 
 function addIngredient (ingredientID) {
@@ -42,17 +58,29 @@ function addIngredient (ingredientID) {
   if (resultIngredients.indexOf(filter) <= -1 && resultIngredients.length<10) {
     var li = document.createElement("LI");
     var textnode = document.createTextNode(filter);
+    li.onclick = function deleteItem() {
+      this.parentNode.removeChild(this);
+      var index = resultIngredients.indexOf(this.innerHTML);
+      resultIngredients.splice(index,1);
+    }
     li.appendChild(textnode);
     document.getElementById("ingredientCheckbox").appendChild(li);
     resultIngredients.push(filter);
   }
 }
+
 function addTimeFilter(timeID) {
   //Limits time filter to 1 option
   if (timeFilterOn == false) {
     var li = document.createElement("LI");
     var filter = document.getElementById(timeID).value;
     var textnode = document.createTextNode(filter);
+    li.onclick = function deleteItem() {
+      this.parentNode.removeChild(this);
+      var index = resultFilter.indexOf(this.innerHTML);
+      resultFilter.splice(index,1);
+      timeFilterOn = false;
+    }
     li.appendChild(textnode);
     document.getElementById("filterSelection").appendChild(li);
     resultFilter.push(filter);
@@ -61,10 +89,17 @@ function addTimeFilter(timeID) {
 }
 
 function addDietFilter(dietID) {
+  //Limits time filter to 1 option
   if (dietFilterOn == false) {
     var li = document.createElement("LI");
     var filter = document.getElementById(dietID).value
     var textnode = document.createTextNode(filter);
+    li.onclick = function deleteItem() {
+      this.parentNode.removeChild(this);
+      var index = resultFilter.indexOf(this.innerHTML);
+      resultFilter.splice(index,1);
+      dietFilterOn = false;
+    }
     li.appendChild(textnode);
     document.getElementById("filterSelection").appendChild(li);
     resultFilter.push(filter);
@@ -74,9 +109,14 @@ function addDietFilter(dietID) {
 
 function addGenericFilter(filterID) {
   var filter = document.getElementById(filterID).value
-  if (resultFilter.indexOf(filter) <= -1) {
+  if (resultFilter.indexOf(filter) == -1) {
     var li = document.createElement("LI");
     var textnode = document.createTextNode(filter);
+    li.onclick = function deleteItem() {
+      this.parentNode.removeChild(this);
+      var index = resultFilter.indexOf(this.innerHTML);
+      resultFilter.splice(index,1);
+    }
     li.appendChild(textnode);
     document.getElementById("filterSelection").appendChild(li);
     resultFilter.push(filter);
@@ -92,4 +132,9 @@ function displayBanner() {
   var filterList = filter + resultFilter.join(', ');
   document.getElementById("bannerIngredients").innerHTML = ingList;
   document.getElementById("bannerFilters").innerHTML = filterList;
+}
+
+function sort() {
+  var x = document.getElementById("sortByList").selectedIndex;
+  // x = Sort by method (0 = alphabetical, 1 = by rating)
 }

@@ -36,7 +36,7 @@
           <ul class="checkbox" id="ingredientCheckbox">
           </ul>
           <div style="text-align:center; font-size:14px; padding: 10px;">
-            Click items to remove.
+            Select items/filters to remove.
           </div>
         </fieldset>
       </div>
@@ -59,89 +59,116 @@
       <!--filtering selection -->
       <button class="accordion" style = background:#D1DEB3 >Protein<img src = "assets/meat.png" height="20" width="20" hspace="3" align= "right"></button>
       <div class="panel">
-        <button class="foodOptions" id = "beef" value="Beef" onclick="addIngredient(this.id)">Beef</button>
-        <button class="foodOptions" id = "chicken" value="Chicken" onclick="addIngredient(this.id)">Chicken</button>
-        <button class="foodOptions" id = "pork" value="Pork" onclick="addIngredient(this.id)">Pork</button>
-        <button class="foodOptions" id = "shrimp" value="Shrimp" onclick="addIngredient(this.id)">Shrimp</button>
-        <button class="foodOptions" id = "lamb" value="Lamb" onclick="addIngredient(this.id)">Lamb</button>
-        <button class="foodOptions" id = "salmon" value="Salmon" onclick="addIngredient(this.id)">Salmon</button>
-        <button class="foodOptions" id = "oyster" value="Oyster" onclick="addIngredient(this.id)">Oyster</button>
-        <button class="foodOptions" id = "clam" value="Clam" onclick="addIngredient(this.id)">Clam</button>
-        <button class="foodOptions" id = "lobster" value="Lobster" onclick="addIngredient(this.id)">Lobster</button>
-        <button class="foodOptions" id = "crab" value="Crab" onclick="addIngredient(this.id)">Crab</button>
+        <button class="foodOptions" id = "beef" value="beef" onclick="addIngredient(this.id)">beef</button>
+        <button class="foodOptions" id = "chicken" value="chicken" onclick="addIngredient(this.id)">chicken</button>
+        <button class="foodOptions" id = "pork" value="pork" onclick="addIngredient(this.id)">pork</button>
+        <button class="foodOptions" id = "shrimp" value="shrimp" onclick="addIngredient(this.id)">shrimp</button>
+        <button class="foodOptions" id = "lamb" value="lamb" onclick="addIngredient(this.id)">lamb</button>
+        <button class="foodOptions" id = "salmon" value="salmon" onclick="addIngredient(this.id)">salmon</button>
+        <button class="foodOptions" id = "oyster" value="oyster" onclick="addIngredient(this.id)">oyster</button>
+        <button class="foodOptions" id = "clam" value="clam" onclick="addIngredient(this.id)">clam</button>
+        <button class="foodOptions" id = "lobster" value="lobster" onclick="addIngredient(this.id)">lobster</button>
+        <button class="foodOptions" id = "crab" value="crab" onclick="addIngredient(this.id)">crab</button>
       </div>
 
       <button class="accordion" style = background:#D2E6CC >Vegetables<img src = "assets/vegetable.png" height="18" width="18" hspace="3" align= "right"></button>
       <div class="panel">
-        <button class="foodOptions" id = "potato" value="Potato" onclick="addIngredient(this.id)">Potato</button>
-        <button class="foodOptions" id = "tomato" value="Tomato" onclick="addIngredient(this.id)">Tomato</button>
-        <button class="foodOptions" id = "onion" value="Onion" onclick="addIngredient(this.id)">Onion</button>
-        <button class="foodOptions" id = "carrot" value="Carrot" onclick="addIngredient(this.id)">Carrot</button>
-        <button class="foodOptions" id = "lettuce" value="Lettuce" onclick="addIngredient(this.id)">Lettuce</button>
-        <button class="foodOptions" id = "broccoli" value="Broccoli" onclick="addIngredient(this.id)">Broccoli</button>
-        <button class="foodOptions" id = "green bell pepper" value="Green Bell Pepper" onclick="addIngredient(this.id)">Green Bell Pepper</button>
-        <button class="foodOptions" id = "red bell pepper" value="Red Bell Pepper" onclick="addIngredient(this.id)">Red Bell Pepper</button>
-        <button class="foodOptions" id = "yellow bell pepper" value="Yellow Bell Pepper" onclick="addIngredient(this.id)">Yellow Bell Pepper</button>
-        <button class="foodOptions" id = "celery" value="Celery" onclick="addIngredient(this.id)">Celery</button>
-        <button class="foodOptions" id = "cucumber" value="Cucumber" onclick="addIngredient(this.id)">Cucumber</button>
-        <button class="foodOptions" id = "corn" value="Corn" onclick="addIngredient(this.id)">Corn</button>
-        <button class="foodOptions" id = "garlic" value="Garlic" onclick="addIngredient(this.id)">Garlic</button>
-        <button class="foodOptions" id = "spinach" value="Spinach" onclick="addIngredient(this.id)">Spinach</button>
-        <button class="foodOptions" id = "mushroom" value="Mushroom" onclick="addIngredient(this.id)">Mushroom</button>
-        <button class="foodOptions" id = "zucchini" value="Zucchini" onclick="addIngredient(this.id)">Zucchini</button>
-        <button class="foodOptions" id = "kale" value="Kale" onclick="addIngredient(this.id)">Kale</button>
-        <button class="foodOptions" id = "brussel" value="Brussel Sprouts" onclick="addIngredient(this.id)">Brussel Sprouts</button>
-        <button class="foodOptions" id = "eggplant" value="Eggplant" onclick="addIngredient(this.id)">Eggplant</button>
+        <button class="foodOptions" id = "potato" value="potato" onclick="addIngredient(this.id)">potato</button>
+        <button class="foodOptions" id = "tomato" value="tomato" onclick="addIngredient(this.id)">tomato</button>
+        <button class="foodOptions" id = "onion" value="onion" onclick="addIngredient(this.id)">onion</button>
+        <button class="foodOptions" id = "carrot" value="carrot" onclick="addIngredient(this.id)">carrot</button>
+        <button class="foodOptions" id = "lettuce" value="lettuce" onclick="addIngredient(this.id)">lettuce</button>
+        <button class="foodOptions" id = "broccoli" value="broccoli" onclick="addIngredient(this.id)">broccoli</button>
+        <button class="foodOptions" id = "green bell pepper" value="green bell pepper" onclick="addIngredient(this.id)">green bell pepper</button>
+        <button class="foodOptions" id = "red bell pepper" value="red bell pepper" onclick="addIngredient(this.id)">red bell pepper</button>
+        <button class="foodOptions" id = "yellow bell pepper" value="yellow bell pepper" onclick="addIngredient(this.id)">yellow bell pepper</button>
+        <button class="foodOptions" id = "celery" value="celery" onclick="addIngredient(this.id)">celery</button>
+        <button class="foodOptions" id = "cucumber" value="cucumber" onclick="addIngredient(this.id)">cucumber</button>
+        <button class="foodOptions" id = "corn" value="corn" onclick="addIngredient(this.id)">corn</button>
+        <button class="foodOptions" id = "garlic" value="garlic" onclick="addIngredient(this.id)">garlic</button>
+        <button class="foodOptions" id = "spinach" value="spinach" onclick="addIngredient(this.id)">spinach</button>
+        <button class="foodOptions" id = "mushroom" value="mushroom" onclick="addIngredient(this.id)">mushroom</button>
+        <button class="foodOptions" id = "zucchini" value="zucchini" onclick="addIngredient(this.id)">zucchini</button>
+        <button class="foodOptions" id = "kale" value="kale" onclick="addIngredient(this.id)">kale</button>
+        <button class="foodOptions" id = "brussel" value="brussel sprouts" onclick="addIngredient(this.id)">brussel sprouts</button>
+        <button class="foodOptions" id = "eggplant" value="eggplant" onclick="addIngredient(this.id)">eggplant</button>
       </div>
 
-      <button class="accordion" style = background:#D7E7E2>Spices/Herbs<img src = "assets/spices.png" height="18" width="18" hspace="3" align= "right"></button>
+      <button class="accordion" style = background:#D7E7E2 >Fruits<img src = "assets/fruit.png" height="22" width="18" hspace="3" align= "right"></button>
       <div class="panel">
-        <button class="foodOptions" id = "allspice" value="Allspice" onclick="addIngredient(this.id)">Allspice</button>
-        <button class="foodOptions" id = "bayLeaf" value="Bay Leaf" onclick="addIngredient(this.id)">Bay Leaf</button>
-        <button class="foodOptions" id = "basil" value="Basil" onclick="addIngredient(this.id)">Basil</button>
-        <button class="foodOptions" id = "cardamom" value="Cardamom" onclick="addIngredient(this.id)">Cardamom</button>
-        <button class="foodOptions" id = "cayenne" value="Cayenne Pepper" onclick="addIngredient(this.id)">Cayenne Pepper</button>
-        <button class="foodOptions" id = "cilantro" value="Cilantro" onclick="addIngredient(this.id)">Cilantro</button>
-        <button class="foodOptions" id = "cinnamon" value="Cinnamon" onclick="addIngredient(this.id)">Cinnamon</button>
-        <button class="foodOptions" id = "cloves" value="Cloves" onclick="addIngredient(this.id)">Cloves</button>
-        <button class="foodOptions" id = "coriander" value="Coriander Seed" onclick="addIngredient(this.id)">Coriander Seed</button>
-        <button class="foodOptions" id = "cumin" value="Cumin" onclick="addIngredient(this.id)">Cumin</button>
-        <button class="foodOptions" id = "fennel" value="Fennel Seed" onclick="addIngredient(this.id)">Fennel Seed</button>
-        <button class="foodOptions" id = "mint" value="Mint" onclick="addIngredient(this.id)">Mint</button>
-        <button class="foodOptions" id = "nutmeg" value="Nutmeg" onclick="addIngredient(this.id)">Nutmeg</button>
-        <button class="foodOptions" id = "oregano" value="Oregano" onclick="addIngredient(this.id)">Oregano</button>
-        <button class="foodOptions" id = "rosemary" value="Rosemary" onclick="addIngredient(this.id)">Rosemary</button>
-        <button class="foodOptions" id = "sage" value="Sage" onclick="addIngredient(this.id)">Sage</button>
-        <button class="foodOptions" id = "paprika" value="Paprika" onclick="addIngredient(this.id)">Paprika</button>
-        <button class="foodOptions" id = "tumeric" value="Tumeric" onclick="addIngredient(this.id)">Tumeric</button>
-        <button class="foodOptions" id = "thyme" value="Thyme" onclick="addIngredient(this.id)">Thyme</button>
+        <button class="foodOptions" id = "banana" value="banana" onclick="addIngredient(this.id)">banana</button>
+        <button class="foodOptions" id = "apple" value="apple" onclick="addIngredient(this.id)">apple</button>
+        <button class="foodOptions" id = "grape" value="grapes" onclick="addIngredient(this.id)">grapes</button>
+        <button class="foodOptions" id = "strawberry" value="strawberry" onclick="addIngredient(this.id)">strawberry</button>
+        <button class="foodOptions" id = "orange" value="orange" onclick="addIngredient(this.id)">orange</button>
+        <button class="foodOptions" id = "watermelon" value="watermelon" onclick="addIngredient(this.id)">watermelon</button>
+        <button class="foodOptions" id = "blueberry" value="blueberry" onclick="addIngredient(this.id)">blueberry</button>
+        <button class="foodOptions" id = "peach" value="peach" onclick="addIngredient(this.id)">peach</button>
+        <button class="foodOptions" id = "cantaloupe" value="cantaloupe" onclick="addIngredient(this.id)">cantaloupe</button>
+        <button class="foodOptions" id = "avocado" value="avocado" onclick="addIngredient(this.id)">avocado</button>
+        <button class="foodOptions" id = "pineapple" value="pineapple" onclick="addIngredient(this.id)">pineapple</button>
+        <button class="foodOptions" id = "cherry" value="cherry" onclick="addIngredient(this.id)">cherry</button>
       </div>
 
-      <button class="accordion" style = background:#D9D3BF >Allergies<img src = "assets/allergies.png" height="18" width="18" hspace="3" align= "right"></button>
+      <button class="accordion" style = background:#d1e0e0>Dairy<img src = "assets/dairy.png" height="20" width="20" hspace="3" align= "right"></button>
       <div class="panel">
-        <button class="foodOptions" id = "dairy" value="Dairy" onclick="addGenericFilter(this.id)">Dairy</button>
-        <button class="foodOptions" id = "egg" value="Egg" onclick="addGenericFilter(this.id)">Egg</button>
-        <button class="foodOptions" id = "gluten" value="Gluten" onclick="addGenericFilter(this.id)">Gluten</button>
-        <button class="foodOptions" id = "peanut" value="Peanut" onclick="addGenericFilter(this.id)">Peanut</button>
-        <button class="foodOptions" id = "seafood" value="Seafood" onclick="addGenericFilter(this.id)">Seafood</button>
-        <button class="foodOptions" id = "sesame" value="Sesame" onclick="addGenericFilter(this.id)">Sesame</button>
-        <button class="foodOptions" id = "soy" value="Soy" onclick="addGenericFilter(this.id)">Soy</button>
-        <button class="foodOptions" id = "sulfite" value="Sulfite" onclick="addGenericFilter(this.id)">Sulfite</button>
-        <button class="foodOptions" id = "treeNut" value="Tree Nut" onclick="addGenericFilter(this.id)">Tree Nut</button>
-        <button class="foodOptions" id = "wheat" value="Wheat" onclick="addGenericFilter(this.id)">Wheat</button>
+        <button class="foodOptions" id = "butter" value="butter" onclick="addIngredient(this.id)">butter</button>
+        <button class="foodOptions" id = "evaporated milk" value="evaporated milk" onclick="addIngredient(this.id)">evaporated milk</button>
+        <button class="foodOptions" id = "milk" value="milk" onclick="addIngredient(this.id)">milk</button>
+        <button class="foodOptions" id = "sour cream" value="sour cream" onclick="addIngredient(this.id)">sour cream</button>
+        <button class="foodOptions" id = "feta" value="feta" onclick="addIngredient(this.id)">feta</button>
+        <button class="foodOptions" id = "cheddar cheese" value="cheddar cheese" onclick="addIngredient(this.id)">cheddar cheese</button>
+        <button class="foodOptions" id = "cream cheese" value="cream cheese" onclick="addIngredient(this.id)">cream cheese</button>
       </div>
 
-      <button class="accordion" style = background:#F6EECC >Dietary Restrictions&nbsp &nbsp<img src = "assets/dietaryRestrictions.png" height="18" width="18" hspace="3" align= "right"></button>
+      <button class="accordion" style = background:#d6e2f1>Spices/Herbs<img src = "assets/spices.png" height="18" width="18" hspace="3" align= "right"></button>
       <div class="panel">
-        <button class="foodOptions" id = "lacto" value="Lacto Vegetarian" onclick="addDietFilter(this.id)">Lacto Vegetarian</button>
-        <button class="foodOptions" id = "ovo" value="Ovo Vegetarian" onclick="addDietFilter(this.id)">Ovo Vegetarian</button>
-        <button class="foodOptions" id = "pesc" value="Pescatarian" onclick="addDietFilter(this.id)">Pescatarian</button>
-        <button class="foodOptions" id = "vegan" value="Vegan" onclick="addDietFilter(this.id)">Vegan</button>
-        <button class="foodOptions" id = "veg" value="Vegetarian" onclick="addDietFilter(this.id)">Vegetarian</button>
+        <button class="foodOptions" id = "allspice" value="allspice" onclick="addIngredient(this.id)">allspice</button>
+        <button class="foodOptions" id = "bayleaf" value="bay leaf" onclick="addIngredient(this.id)">bay leaf</button>
+        <button class="foodOptions" id = "basil" value="basil" onclick="addIngredient(this.id)">basil</button>
+        <button class="foodOptions" id = "cardamom" value="cardamom" onclick="addIngredient(this.id)">cardamom</button>
+        <button class="foodOptions" id = "cayenne" value="cayenne pepper" onclick="addIngredient(this.id)">cayenne pepper</button>
+        <button class="foodOptions" id = "cilantro" value="cilantro" onclick="addIngredient(this.id)">cilantro</button>
+        <button class="foodOptions" id = "cinnamon" value="cinnamon" onclick="addIngredient(this.id)">cinnamon</button>
+        <button class="foodOptions" id = "cloves" value="cloves" onclick="addIngredient(this.id)">cloves</button>
+        <button class="foodOptions" id = "coriander" value="coriander seed" onclick="addIngredient(this.id)">coriander seed</button>
+        <button class="foodOptions" id = "cumin" value="cumin" onclick="addIngredient(this.id)">cumin</button>
+        <button class="foodOptions" id = "fennel" value="fennel seed" onclick="addIngredient(this.id)">fennel seed</button>
+        <button class="foodOptions" id = "mint" value="mint" onclick="addIngredient(this.id)">mint</button>
+        <button class="foodOptions" id = "nutmeg" value="nutmeg" onclick="addIngredient(this.id)">nutmeg</button>
+        <button class="foodOptions" id = "oregano" value="oregano" onclick="addIngredient(this.id)">oregano</button>
+        <button class="foodOptions" id = "rosemary" value="rosemary" onclick="addIngredient(this.id)">rosemary</button>
+        <button class="foodOptions" id = "sage" value="sage" onclick="addIngredient(this.id)">sage</button>
+        <button class="foodOptions" id = "paprika" value="paprika" onclick="addIngredient(this.id)">paprika</button>
+        <button class="foodOptions" id = "tumeric" value="tumeric" onclick="addIngredient(this.id)">tumeric</button>
+        <button class="foodOptions" id = "thyme" value="thyme" onclick="addIngredient(this.id)">thyme</button>
+      </div>
+
+      <button class="accordion" style = background:#ddd2e0 >Allergies<img src = "assets/allergies.png" height="18" width="18" hspace="3" align= "right"></button>
+      <div class="panel">
+        <button class="foodOptions" id = "dairy" value="dairy" onclick="addGenericFilter(this.id)">dairy</button>
+        <button class="foodOptions" id = "egg" value="egg" onclick="addGenericFilter(this.id)">egg</button>
+        <button class="foodOptions" id = "gluten" value="gluten" onclick="addGenericFilter(this.id)">gluten</button>
+        <button class="foodOptions" id = "peanut" value="peanut" onclick="addGenericFilter(this.id)">peanut</button>
+        <button class="foodOptions" id = "seafood" value="seafood" onclick="addGenericFilter(this.id)">seafood</button>
+        <button class="foodOptions" id = "sesame" value="sesame" onclick="addGenericFilter(this.id)">sesame</button>
+        <button class="foodOptions" id = "soy" value="soy" onclick="addGenericFilter(this.id)">soy</button>
+        <button class="foodOptions" id = "sulfite" value="sulfite" onclick="addGenericFilter(this.id)">sulfite</button>
+        <button class="foodOptions" id = "treenut" value="tree nut" onclick="addGenericFilter(this.id)">tree nut</button>
+        <button class="foodOptions" id = "wheat" value="wheat" onclick="addGenericFilter(this.id)">wheat</button>
+      </div>
+
+      <button class="accordion" style = background:#E9DDE7 >Dietary Restrictions&nbsp &nbsp<img src = "assets/dietaryRestrictions.png" height="18" width="18" hspace="3" align= "right"></button>
+      <div class="panel">
+        <button class="foodOptions" id = "lacto" value="lacto vegetarian" onclick="addDietFilter(this.id)">lacto vegetarian</button>
+        <button class="foodOptions" id = "ovo" value="ovo vegetarian" onclick="addDietFilter(this.id)">ovo vegetarian</button>
+        <button class="foodOptions" id = "pesc" value="pescatarian" onclick="addDietFilter(this.id)">pescatarian</button>
+        <button class="foodOptions" id = "vegan" value="vegan" onclick="addDietFilter(this.id)">vegan</button>
+        <button class="foodOptions" id = "veg" value="vegetarian" onclick="addDietFilter(this.id)">vegetarian</button>
         <div>&nbsp &nbsp*Limit 1</div>
       </div>
 
-      <button class="accordion" style = background:#FFF4E9 >Cuisine<img src = "assets/cuisine.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#ffd7d3 >Cuisine<img src = "assets/cuisine.png" height="20" width="20" align= "right"></button>
       <div class="panel">
         <button class="foodOptions" id = "main" value="American" onclick = "addGenericFilter(this.id)">American</button>
         <button class="foodOptions" id = "italian" value="Italian" onclick = "addGenericFilter(this.id)">Italian</button>
@@ -170,7 +197,7 @@
         <button class="foodOptions" id = "portugese" value="Portugese" onclick = "addGenericFilter(this.id)">Portugese</button>
       </div>
 
-      <button class="accordion" style = background:#CBBBCE >Course<img src = "assets/course.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#ffe1cc >Course<img src = "assets/course.png" height="20" width="20" align= "right"></button>
       <div class="panel">
         <button class="foodOptions" id = "main" value="Main Dishes" onclick = "addGenericFilter(this.id)">Main Dishes</button>
         <button class="foodOptions" id = "dessert" value="Desserts" onclick = "addGenericFilter(this.id)">Desserts</button>
@@ -186,12 +213,12 @@
         <button class="foodOptions" id = "cocktail" value="Cocktails" onclick = "addGenericFilter(this.id)">Cocktails</button>
       </div>
 
-      <button class="accordion" style = background:#E9DDE7 >Prep + Cook Time<img src = "assets/time.png" height="20" width="20" align= "right"></button>
+      <button class="accordion" style = background:#F6EECC >Prep + Cook Time<img src = "assets/time.png" height="20" width="20" align= "right"></button>
       <div class="panel">
-        <button class="foodOptions" id = "30mins" value="Max of 30 minutes" onclick="addTimeFilter(this.id)">Max of 30 mins.</button>
-        <button class="foodOptions" id = "1hr" value="Max of 1 hour" onclick="addTimeFilter(this.id)">Max of 1 hour</button>
-        <button class="foodOptions" id = "1.5hr" value="Max of 1.5 hours" onclick="addTimeFilter(this.id)">Max of 1.5 hours</button>
-        <button class="foodOptions" id = "2hr" value="Max of 2 hours" onclick="addTimeFilter(this.id)">Max of 2 hours</button>
+        <button class="foodOptions" id = "30mins" value="max of 30 minutes" onclick="addTimeFilter(this.id)">max of 30 mins.</button>
+        <button class="foodOptions" id = "1hr" value="max of 1 hour" onclick="addTimeFilter(this.id)">max of 1 hour</button>
+        <button class="foodOptions" id = "1.5hr" value="max of 1.5 hours" onclick="addTimeFilter(this.id)">max of 1.5 hours</button>
+        <button class="foodOptions" id = "2hr" value="max of 2 hours" onclick="addTimeFilter(this.id)">max of 2 hours</button>
         <div>&nbsp &nbsp*Limit 1</div>
       </div>
 

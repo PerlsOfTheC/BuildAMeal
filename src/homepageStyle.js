@@ -25,13 +25,13 @@ function addToCheckBox() {
   var li = document.createElement("li");
   var val = $('#myInput').val();
 
-  if (!/^[a-zA-Z\s-]*$/.test(val)) {
+  if (!/^[a-zA-Z\s-]*$/.test(val) || val == '') {
     $('#myInput').val('ERROR: Not a valid ingredient.').focus();
   }
   else {
-    val = toTitleCase(val);
+    val = val.toLowerCase();
     if (resultIngredients.indexOf(val) > -1) {
-      $('#myInput').val('ERROR: Cannot add duplicate ingredients.').focus();
+      $('#myInput').val('ERROR: No duplicates.').focus();
     }
     else if (resultIngredients.length == 10) {
       $('#myInput').val('Max of 10 ingredients reached.').focus()
@@ -48,12 +48,6 @@ function addToCheckBox() {
      $('#myInput').val('').focus();
     }
   }
-}
-
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
 }
 
 function addIngredient (ingredientID) {

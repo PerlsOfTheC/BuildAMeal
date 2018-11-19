@@ -23,28 +23,31 @@ $("document").ready(function() {
 function addToCheckBox() {
   var ul = document.getElementById("ingredientCheckbox");
   var li = document.createElement("li");
-  var val = toTitleCase($('#myInput').val().toLowerCase());
+  var val = $('#myInput').val();
 
-  // if valid ingredient
-  // if (VAL IS A VALID INGREDIENT) {
-  //   if (resultIngredients.indexOf(val) > -1) {
-  //     $('#myInput').val('ERROR: Cannot add duplicate ingredients.').focus();
-  //   }
-  //   else if (resultIngredients.length == 10) {
-  //     $('#myInput').val('Max of 10 ingredients reached.').focus()
-  //   }
-  //   else { // only push if valid ingredient, not already in ingredients List && max not reached
-  //     resultIngredients.push(val);
-  //     li.onclick = function deleteItem() {
-  //        this.parentNode.removeChild(this);
-  //        var index = resultIngredients.indexOf(this.innerHTML);
-  //        resultIngredients.splice(index,1);
-  //    }
-  //     li.appendChild(document.createTextNode(val));
-  //     ul.appendChild(li);
-  //     $('#myInput').val('').focus();
-  //   }
-  // }
+  if (!/^[a-zA-Z\s-]*$/.test(val)) {
+    $('#myInput').val('ERROR: Not a valid ingredient.').focus();
+  }
+  else {
+    val = toTitleCase(val);
+    if (resultIngredients.indexOf(val) > -1) {
+      $('#myInput').val('ERROR: Cannot add duplicate ingredients.').focus();
+    }
+    else if (resultIngredients.length == 10) {
+      $('#myInput').val('Max of 10 ingredients reached.').focus()
+    }
+    else { // only push if valid ingredient, not already in ingredients List && max not reached
+     resultIngredients.push(val);
+     li.onclick = function deleteItem() {
+      this.parentNode.removeChild(this);
+      var index = resultIngredients.indexOf(this.innerHTML);
+      resultIngredients.splice(index,1);
+     }
+     li.appendChild(document.createTextNode(val));
+     ul.appendChild(li);
+     $('#myInput').val('').focus();
+    }
+  }
 }
 
 function toTitleCase(str) {

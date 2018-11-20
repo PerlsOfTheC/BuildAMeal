@@ -199,7 +199,7 @@ function getJSON(url, cb) {
 ingredientsList = ['onion', 'carrot', 'milk'];
 searchQ = searchForRecipe(ingredientsList)
   .requiredIngredients(ingredientsList)
-  .maxResults(5)
+  .maxResults(3)
   .requiredCuisines('American')
   .getURL();
 
@@ -208,8 +208,8 @@ var recipeIDQueue = [];
 //TODO: Fix issue with adding values to array
 // getJSON(searchQ, function(get) {
 //   get.matches.forEach(function(recipe) {
-    // recipeIDQueue.push(JSON.parse(recipe.id));
-    // console.log(recipe.recipeName);
+//     recipeIDQueue.push(JSON.parse(recipe.id));
+//     console.log(recipe.recipeName);
     // console.log(recipe.id);
     // console.log(recipe.ingredients);
     // console.log(recipe);
@@ -255,10 +255,26 @@ function getRecipeURLs(input) {
 
 recipeIDQueue = ['Southern-Chicken-and-Corn-Chowder-1067232', 'Roasted-Garlic_potato-Soup-My-Recipes', 'Turkey-Meatloaf-2505129'];
 recipeUrlQueue = getRecipeURLs(recipeIDQueue);
-if (typeof recipeUrlQueue != null) {
-  for (let recipeUrl of recipeUrlQueue) {
-    console.log(recipeUrl);
-  }
-} else {
-  console.log("Nothing in recipeURL")
-}
+// if (typeof recipeUrlQueue != null) {
+//   for (let recipeUrl of recipeUrlQueue) {
+//     getJSON(recipeUrl, function (get) {
+//       get.matches.forEach(function(recipe) {
+//         console.log(recipe)
+//       });
+//     });
+//   }
+// } else {
+//   console.log("Nothing in recipeURL")
+// }
+
+// getJSON(getRecipeURLs(recipeIDQueue[0]), function(get) {
+//   get.matches.forEach(function(recipe) {
+//     console.log(recipe.source.sourceRecipeUrl);
+//   });
+// });
+//
+
+// Getting recipe information a level deeper
+getJSON(recipeUrlQueue[0], function(get) {
+  console.log(get.source);
+});

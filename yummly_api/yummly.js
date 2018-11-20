@@ -15,11 +15,10 @@ const Config = {
   "endpoints": {
     "recipeUrl" : "https://api.yummly.com/v1/api/recipe/",
     "recipesUrl" : "https://api.yummly.com/v1/api/recipes",
-    "metaUrl" : "https://api.yummly.com/v1/api/metadata/"
   }
 };
 
-// Issue with returning URL before getting JSON info
+// Builds recipe query using the recipes endpoint
 function searchForRecipe(ingredientList) {
   var url = Config.endpoints.recipesUrl + appQuery;
 
@@ -203,9 +202,7 @@ searchQ = searchForRecipe(ingredientsList)
   .requiredCuisines('American')
   .getURL();
 
-var recipeIDQueue = [];
 // THIS IS HOW TO GET specific data from the JSON request
-//TODO: Fix issue with adding values to array
 // getJSON(searchQ, function(get) {
 //   get.matches.forEach(function(recipe) {
 //     recipeIDQueue.push(JSON.parse(recipe.id));
@@ -216,6 +213,21 @@ var recipeIDQueue = [];
   // });
 // });
 
+// Function that will recieve a recipeURL and return detailed info about recipe (JSON)
+// uses recipe endpoint
+// TODO: figure out how to send input, sending to console is temporary
+function getRecipeInfo(urlList) {
+  if (Array.isArray(urlList)) {
+    for (var i = 0; i < urlList.length; i++) {
+      getJSON(urlList[i], function (get) {
+        console.log(get)
+      })
+    }
+  }
+
+}
+
+// Builds recipe url for the recipe endpoint
 function getRecipeURLs(input) {
   var recipeUrlQueue = [];
 
@@ -225,7 +237,6 @@ function getRecipeURLs(input) {
       url += input[i];
       url += appQuery;
       recipeUrlQueue.push(url);
-      // recipeDetailQueue.push(getJSON(url, null))
     }
   }
 
@@ -234,7 +245,6 @@ function getRecipeURLs(input) {
     url += input;
     url += appQuery;
     recipeUrlQueue.push(url);
-    // recipeDetailQueue.push(getJSON(url, null))
   }
 
   if (recipeUrlQueue.length) {
@@ -245,36 +255,6 @@ function getRecipeURLs(input) {
 
 }
 
-// if (recipeIDQueue.length) {
-//   for (let recipeID of recipeIDQueue) {
-//     console.log(recipeID);
-//   }
-// } else {
-//   console.log('problem with recipeIDQueue')
-// }
-
 recipeIDQueue = ['Southern-Chicken-and-Corn-Chowder-1067232', 'Roasted-Garlic_potato-Soup-My-Recipes', 'Turkey-Meatloaf-2505129'];
 recipeUrlQueue = getRecipeURLs(recipeIDQueue);
-// if (typeof recipeUrlQueue != null) {
-//   for (let recipeUrl of recipeUrlQueue) {
-//     getJSON(recipeUrl, function (get) {
-//       get.matches.forEach(function(recipe) {
-//         console.log(recipe)
-//       });
-//     });
-//   }
-// } else {
-//   console.log("Nothing in recipeURL")
-// }
-
-// getJSON(getRecipeURLs(recipeIDQueue[0]), function(get) {
-//   get.matches.forEach(function(recipe) {
-//     console.log(recipe.source.sourceRecipeUrl);
-//   });
-// });
-//
-
-// Getting recipe information a level deeper
-getJSON(recipeUrlQueue[0], function(get) {
-  console.log(get.source);
-});
+getRecipeInfo(recipeUrlQueue);

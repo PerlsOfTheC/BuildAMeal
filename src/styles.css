@@ -277,7 +277,7 @@ input[type=text] {
     text-align: center;
 }
 .bannerBackground {
-  margin-top: 10px;
+  margin:1vw;
   background-color: white;
   border-style: solid;
   border-color: #D0D0D0;

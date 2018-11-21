@@ -19,8 +19,18 @@
   <body>
     <!--Configure the heading -->
     <div class = "heading">
-      <span><a href="http://build-a-meal.net/" style="font-size: 30px; text-decoration:none; color:black; font-weight:bold">Build-A-Meal</a></span>
-      <a href="http://build-a-meal.net/"><img border="" alt=""  style = "display:block" src="assets/logo.png" width="40" height="40" ></a>
+      <table style="width:100%; height:100%">
+        <tr>
+          <td align="left" valign="middle">
+            <span><a href="http://build-a-meal.net/" style="font-size: 30px; align: middle; text-decoration:none; color:black; font-weight:bold">&nbsp &nbspBuild-A-Meal</a></span>
+            <a href="http://build-a-meal.net/"><img border="" align="top" alt="" src="assets/logo.png" width="40" height="40" ></a>
+          </td>
+          <td valign="middle" style="text-align:right;">
+            <img src="https://bit.ly/2D6pfwD" align="top" alt="Email" width="20" height="20" ></span><span> <a href="mailto:info@build-a-meal.net" style="text-decoration:none; color:black">info@build-a-meal.net</a>&nbsp&nbsp&nbsp
+            <p><img src="assets/logo.png" align="top" alt="Team Page" width="20" height="20" ></span><span> <a href="http://cs480-projects.github.io/teams-fall2018/PerlsOfTheC/index.html" style="text-decoration:none; color:black ; margin-left:0%">Visit our team page! &nbsp &nbsp</a></p>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <!-- Configure the left scroll pane -->
@@ -32,11 +42,11 @@
       <!--Ingredients List -->
       <div class="ingredientList" style: "text-align:center">
         <fieldset class="group">
-          <legend>Ingredients List</legend>
+          <legend>&nbsp&nbspIngredients List&nbsp&nbsp</legend>
           <ul class="checkbox" id="ingredientCheckbox">
           </ul>
           <div style="text-align:center; font-size:14px; padding: 10px;">
-            Select items/filters to remove.
+            <font color = "grey"><b> &#9432; Select items/filters to remove.</b></font>
           </div>
         </fieldset>
       </div>
@@ -50,7 +60,7 @@
       </div>
 
       <!-- Search bar -->
-        <button class="add" onclick="addToCheckBox()"  style="float: right" ><span> Add </span></button>
+        <button class="add" id = "add" onclick="addToCheckBox()"  style="float: right" ><span> Add </span></button>
         <span class="help"  style="float: right" ><span class = "tooltip"> ? <span class="tooltiptext">Simply choose ingredients from the preloaded lists below and click to add to the ingredients list, or search for a total of 10 ingredients. </span></span></span>
           <div style="overflow: hidden; padding-right: .5em;">
              <input type="text" id="myInput" spellcheck="true" name="myIngredients" placeholder="Search" style="width: 97%">
@@ -235,29 +245,13 @@
           <select id="sortByList" class = "sortByFont">
             <option value="alphabetical" selected="selected">Alphabetical Order</option>
             <option value="rating">Rating (High to Low)</option>
-            <option value="rating">Prep Time</option>
+            <option value="rating">Prep Time (Low to High)</option>
           </select>
           <button onclick="sort()" style = "background-color: grey; border: none; color: white; font-family: Dosis"> OK </button>
         </p>
       </div>
     </div>
 
-    <div class="footer">
-      <div class="row">
-        <div class="column">
-          <span class = "footerContent"><img src="https://bit.ly/2D6pfwD" alt="Email" width="20" height="20" ></span><span> <a href="mailto:info@build-a-meal.net" style="text-decoration:none; color:black">info@build-a-meal.net</a></span>
-        </div>
-        <div class="column">
-          <span class = "footerContent"><img src="https://seeklogo.com/images/G/google-slides-logo-1B083B4C03-seeklogo.com.png" alt="Presentation" width="20" height="20"></span><span>&nbsp;&nbsp;<a href="https://goo.gl/dT2pkH" style="text-decoration:none; color:black">See our presentation!</a></span>
-        </div>
-        <div class="column">
-          <span class = "footerContent"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20" height="20"></span><span> <a href="https://github.com/PerlsOfTheC/BuildAMeal" style="text-decoration:none; color:black"> &nbsp;Watch us in action!</a></span>
-        </div>
-        <div class="column">
-          <span class = "footerContent"><img src="assets/logo.png" alt="Team Page" width="20" height="20" ></span><span> <a href="https://github.com/cs480-projects/cs480-projects.github.io/blob/master/teams-fall2018/PerlsOfTheC/index.html" style="text-decoration:none; color:black ; margin-left:0%">&nbsp;Visit our team page!</a></span>
-        </div>
-      </div>
-    </div>
 <!--End of page -->
   </body>
 </html>

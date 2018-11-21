@@ -3,6 +3,7 @@ var resultFilter = [];
 var resultIngredients = [];
 var timeFilterOn = false;
 var dietFilterOn = false;
+var sortingType;
 
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
@@ -18,6 +19,12 @@ $("document").ready(function() {
       }
     });
   }
+});
+$("document").ready(function(){
+    $('#myInput').keypress(function(e){
+      if(e.keyCode==13)
+      $('#add').click();
+    });
 });
 
 function addToCheckBox() {
@@ -129,9 +136,10 @@ function displayBanner() {
   var filterList = filter + resultFilter.join(', ');
   document.getElementById("bannerIngredients").innerHTML = ingList;
   document.getElementById("bannerFilters").innerHTML = filterList;
+  document.getElementById("sortByList").selectedIndex = "0";
 }
 
 function sort() {
-  var x = document.getElementById("sortByList").selectedIndex;
-  // x = Sort by method (0 = alphabetical, 1 = by rating)
+  sortingType = document.getElementById("sortByList").selectedIndex;
+  // x = Sort by method (0 = alphabetical, 1 = by rating; 2 = Prep Time (low to high))
 }

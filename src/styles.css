@@ -8,18 +8,15 @@ html, body {
 .heading {
   margin: 0px;
   height:9vh;
-  text-align: center;
   background-color: white;
   position: fixed;
   right: 0;
   left: 0;
   z-index: 999;
-  display:flex;
-  justify-content: center;
-  align-items: center;
   border: 0.75vh solid #b3cccc;
+  display: table-cell;
+  overflow:auto;
 }
-
 /* ---------left scroll bar--------*/
 .left {
   margin-top: 10vh;
@@ -33,7 +30,6 @@ html, body {
   width: 30%;
   overflow-y: scroll;
 }
-
 
 /* ---------Find me recipes!--------*/
 .findRecipes {
@@ -254,28 +250,6 @@ input[type=text] {
 }
 
 /* ---------footer--------*/
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0px;
-  width: 100%;
-  background-color: white;
-  color: black;
-  text-align: left;
-}
-.footerContent {
-  margin-left: 3%;
-  margin-top: -4px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.column {
-    float: left;
-    width: 21.5%;
-    padding: 15px;
-    height: 2vh;
-    text-align: center;
-}
 .bannerBackground {
   margin:1vw;
   background-color: white;
@@ -300,10 +274,4 @@ input[type=text] {
   right: 0;
   overflow-y: scroll;
   width: 70%;
-}
-
-@media screen and (max-width: 600px) { /* Columns in footer will stack on top of each other if screen is less than 600px wide */
-    .column {
-        width: 100%;
-    }
 }

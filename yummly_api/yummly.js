@@ -87,7 +87,6 @@ function searchForRecipe(ingredientList) {
           if (Array.isArray(input)) {
             input.forEach(function (item) {
               url += '&allowedDiet[]=' + encodeURIComponent(item);
-              apiParameters.requiredDiets.push(item);
             });
 
           } else if (typeof input === 'string') {

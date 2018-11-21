@@ -5,6 +5,8 @@ var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
 
+
+
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -20,6 +22,7 @@ $("document").ready(function() {
     });
   }
 });
+
 $("document").ready(function(){
     $('#myInput').keypress(function(e){
       if(e.keyCode==13)
@@ -128,15 +131,34 @@ function addGenericFilter(filterID) {
 }
 
 function displayBanner() {
-  var ing = "\xa0\xa0\xa0Showing results for: \xa0";
-  ing = ing.bold();
-  var filter = "\xa0\xa0\xa0Filters applied: \xa0";
-  filter = filter.bold();
+  var ing = ("\xa0\xa0\xa0Showing results for: \xa0").bold();
+  var filter = ("\xa0\xa0\xa0Filters applied: \xa0").bold();
   var ingList = ing + resultIngredients.join(', ');
   var filterList = filter + resultFilter.join(', ');
   document.getElementById("bannerIngredients").innerHTML = ingList;
   document.getElementById("bannerFilters").innerHTML = filterList;
   document.getElementById("sortByList").selectedIndex = "0";
+
+  var div = document.createElement("div");
+  div.style.background = "white";
+  div.style.color = "black";
+  div.style.margin = "1vw";
+  div.style.border = "2px solid";
+  div.style.borderColor = "#D0D0D0";
+  div.style.height = "18vh";
+
+  var a = document.createElement('a');
+  a.href = 'http://google.com';
+  var pic = document.createElement('img');
+  pic.setAttribute('src','https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&h=350');
+  pic.style.objectFit = "cover";
+  pic.style.margin = "2vh";
+  pic.style.height = "14vh";
+  pic.style.width = "14vh";
+
+  a.append(pic);
+  div.append(a);
+  document.getElementById("finalRecipes").append(div);
 }
 
 function sort() {

@@ -15,7 +15,7 @@ html, body {
   z-index: 999;
   border: 0.75vh solid #b3cccc;
   display: table-cell;
-  overflow:auto;
+  overflow: auto;
 }
 /* ---------left scroll bar--------*/
 .left {

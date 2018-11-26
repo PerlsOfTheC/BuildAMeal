@@ -1,9 +1,11 @@
-var resultFilter = [];
+var resultFilter = []; // the displayed filters
+var finalResultFilter = [];  // the filters with proper searchID
 var resultIngredients = [];
+var expectedFilter = ["Dairy-Free","Egg-Free","Gluten-Free","Peanut-Free","Seafood-Free", "Sesame-Free","Soy-Free", "Sulfite-Free","Tree Nut-Free","Wheat-Free", "Lacto vegetarian", "Ovo vegetarian", "Pescetarian","Vegan","Lacto-ovo vegetarian"];
+var actualFilter = ["396^Dairy-Free","397^Egg-Free","393^Gluten-Free","394^Peanut-Free","398^Seafood-Free","399^Sesame-Free","400^Soy-Free", "401^Sulfite-Free", "395^Tree Nut-Free","392^Wheat-Free",  "388^Lacto vegetarian", "389^Ovo vegetarian", "390^Pescetarian","387^Lacto-ovo vegetarian"];
 var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
-
 
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
@@ -128,13 +130,23 @@ function addGenericFilter(filterID) {
   }
 }
 
-console.log(resultIngredients);
-
+function createFinalResultFilter() {
+  finalResultFilter = resultFilter.slice(0);
+  var i;
+  for (i = 0; i < expectedFilter.length; i++) {
+    var j = finalResultFilter.indexOf(expectedFilter[i]);
+    if (j != -1) { //
+      finalResultFilter.splice(j,1,actualFilter[i])
+    }
+  }
+  console.log(finalResultFilter);
+}
 function displayBanner() {
   var ing = ("\xa0\xa0\xa0Showing results for: \xa0").bold();
   var filter = ("\xa0\xa0\xa0Filters applied: \xa0").bold();
   var ingList = ing + resultIngredients.join(', ');
   var filterList = filter + resultFilter.join(', ');
+  createFinalResultFilter();
   document.getElementById("bannerIngredients").innerHTML = ingList;
   document.getElementById("bannerFilters").innerHTML = filterList;
   document.getElementById("sortByList").selectedIndex = "0";
@@ -250,7 +262,7 @@ function displayBanner() {
     row3A = document.createElement("div");
     bold = document.createElement('strong');
     boldText = document.createTextNode("COOKING TIME: ");
-    row3AData = document.createTextNode("HElHEll oHElloHEll oHElloHElloHEl loHElloHEl loHElloH ElloHElHE lloHElloHEllo HElloH ElloH ElloHElloH  loHElloH ElloHElHE lloHElloHEllo HElloH ElloH ElloHElloH  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHEl");
+    row3AData = document.createTextNode("min");
     row3A.style.padding = "0vh 10vh 0px 0px";
     row3A.style.height = "3vh";
     row3A.style.width = "50%";

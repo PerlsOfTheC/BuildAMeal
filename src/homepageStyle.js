@@ -1,11 +1,25 @@
+const yummly = require('./yummly.js');
+
 var resultFilter = []; // the displayed filters
 var finalResultFilter = [];  // the filters with proper searchID
+
 var resultIngredients = [];
 var expectedFilter = ["Dairy-Free","Egg-Free","Gluten-Free","Peanut-Free","Seafood-Free", "Sesame-Free","Soy-Free", "Sulfite-Free","Tree Nut-Free","Wheat-Free", "Lacto vegetarian", "Ovo vegetarian", "Pescetarian","Vegan","Lacto-ovo vegetarian"];
 var actualFilter = ["396^Dairy-Free","397^Egg-Free","393^Gluten-Free","394^Peanut-Free","398^Seafood-Free","399^Sesame-Free","400^Soy-Free", "401^Sulfite-Free", "395^Tree Nut-Free","392^Wheat-Free",  "388^Lacto vegetarian", "389^Ovo vegetarian", "390^Pescetarian","387^Lacto-ovo vegetarian"];
 var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
+
+
+ingredientsList = ['salmon', 'mushroom', 'spinach', 'butter'];
+searchQ = yummly.searchForRecipe(ingredientsList)
+  .requiredIngredients(ingredientsList)
+  .maxResults(50)
+  .includedAllergies("395^Tree Nut-Free")
+  .getURL();
+
+console.log("URL called from homepageStyle: " + searchQ);
+
 
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");

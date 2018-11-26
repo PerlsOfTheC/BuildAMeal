@@ -10,17 +10,6 @@ var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
 
-
-ingredientsList = ['salmon', 'mushroom', 'spinach', 'butter'];
-searchQ = yummly.searchForRecipe(ingredientsList)
-  .requiredIngredients(ingredientsList)
-  .maxResults(50)
-  .includedAllergies("395^Tree Nut-Free")
-  .getURL();
-
-console.log("URL called from homepageStyle: " + searchQ);
-
-
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
   var i;

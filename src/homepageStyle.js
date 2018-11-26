@@ -4,6 +4,7 @@ var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
 
+
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -126,6 +127,8 @@ function addGenericFilter(filterID) {
     resultFilter.push(filter);
   }
 }
+
+console.log(resultIngredients);
 
 function displayBanner() {
   var ing = ("\xa0\xa0\xa0Showing results for: \xa0").bold();

@@ -71,11 +71,11 @@ function searchForRecipe(ingredientList) {
         if (input && input.length) {
           if (Array.isArray(input)) {
             input.forEach(function (item) {
-              url += '&includedAllergy[]=' + encodeURIComponent(item);
+              url += '&allowedAllergy[]=' + item;
             });
 
           } else if (typeof input === 'string') {
-            url += '&includedAllergy[]=' + encodeURIComponent(input);
+            url += '&allowedAllergy[]=' + input;
           }
         }
 
@@ -193,24 +193,81 @@ function getJSON(url, cb) {
   request(options, callback);
 }
 
-
-ingredientsList = ['onion', 'carrot', 'milk'];
+ingredientsList = ['milk', 'eggs', 'potato'];
 searchQ = searchForRecipe(ingredientsList)
   .requiredIngredients(ingredientsList)
-  .maxResults(3)
-  .requiredCuisines('American')
+  .requiredCuisines("american")
+  .maxResults(50)
   .getURL();
 
 // THIS IS HOW TO GET specific data from the JSON request
+recipeIDQueue = [];
+// var obj = null;
 // getJSON(searchQ, function(get) {
 //   get.matches.forEach(function(recipe) {
-//     recipeIDQueue.push(JSON.parse(recipe.id));
-//     console.log(recipe.recipeName);
+//     obj = JSON.stringify(recipe.id);
+//     recipeIDQueue.push(recipe.id);
+//   });
+
+  // console.log("Number of recipes: " + recipeIDQueue.length);
+  // if (recipeIDQueue.length) {
+  //   for (var i = 0; i < recipeIDQueue.length; i++) {
+  //     console.log(recipeIDQueue[i]);
+  //   }
+  // } else {
+  //   console.log("An empty list");
+  // }
+  //
+  // recipeURLQueue = getRecipeURLs(recipeIDQueue);
+  // if (recipeURLQueue.length) {
+  //   for (var i = 0; i < recipeURLQueue.length; i++) {
+  //     console.log(recipeURLQueue[i]);
+  //   }
+  // } else {
+  //   console.log("An empty list");
+  // }
+
+// });
+
+// ingredientsList = ['beef', 'onion', 'garlic', 'butter'];
+// searchQ = searchForRecipe(ingredientsList)
+//   .requiredIngredients(ingredientsList)
+//   .maxResults(50)
+//   .getURL();
+//
+// console.log("Url: " + searchQ);
+// getJSON(searchQ, function(get) {
+//   get.matches.forEach(function (recipe) {
+    // obj = JSON.stringify(recipe.id);
     // console.log(recipe.id);
     // console.log(recipe.ingredients);
-    // console.log(recipe);
+    // recipeIDQueue.push(recipe.id);
   // });
+  //
+  // console.log("Number of recipes: " + recipeIDQueue.length);
 // });
+
+ingredientsList = ['salmon', 'mushroom', 'spinach', 'butter'];
+searchQ = searchForRecipe(ingredientsList)
+  .requiredIngredients(ingredientsList)
+  .maxResults(50)
+  .includedAllergies("395^Tree Nut-Free")
+  .getURL();
+
+console.log("Url: " + searchQ);
+getJSON(searchQ, function(get) {
+  get.matches.forEach(function (recipe) {
+// obj = JSON.stringify(recipe.id);
+console.log(recipe.id);
+console.log(recipe.ingredients);
+recipeIDQueue.push(recipe.id);
+});
+
+console.log("Number of recipes: " + recipeIDQueue.length);
+});
+
+
+
 
 // Function that will recieve a recipeURL and return detailed info about recipe (JSON)
 // uses recipe endpoint
@@ -254,6 +311,6 @@ function getRecipeURLs(input) {
 
 }
 
-recipeIDQueue = ['Southern-Chicken-and-Corn-Chowder-1067232', 'Roasted-Garlic_potato-Soup-My-Recipes', 'Turkey-Meatloaf-2505129'];
-recipeUrlQueue = getRecipeURLs(recipeIDQueue);
-getRecipeInfo(recipeUrlQueue);
+// recipeIDQueue = ['Southern-Chicken-and-Corn-Chowder-1067232', 'Roasted-Garlic_potato-Soup-My-Recipes', 'Turkey-Meatloaf-2505129'];
+// recipeUrlQueue = getRecipeURLs(recipeIDQueue);
+// getRecipeInfo(recipeUrlQueue);

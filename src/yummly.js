@@ -190,8 +190,44 @@ function getJSON(url, cb) {
     }
   }
 
-  request(options, callback)
+  request(options, callback);
 }
+
+// ingredientsList = ['milk', 'eggs', 'potato'];
+// searchQ = searchForRecipe(ingredientsList)
+//   .requiredIngredients(ingredientsList)
+//   .requiredCuisines("american")
+//   .maxResults(50)
+//   .getURL();
+
+// THIS IS HOW TO GET specific data from the JSON request
+recipeIDQueue = [];
+// var obj = null;
+// getJSON(searchQ, function(get) {
+//   get.matches.forEach(function(recipe) {
+//     obj = JSON.stringify(recipe.id);
+//     recipeIDQueue.push(recipe.id);
+//   });
+
+// console.log("Number of recipes: " + recipeIDQueue.length);
+// if (recipeIDQueue.length) {
+//   for (var i = 0; i < recipeIDQueue.length; i++) {
+//     console.log(recipeIDQueue[i]);
+//   }
+// } else {
+//   console.log("An empty list");
+// }
+//
+// recipeURLQueue = getRecipeURLs(recipeIDQueue);
+// if (recipeURLQueue.length) {
+//   for (var i = 0; i < recipeURLQueue.length; i++) {
+//     console.log(recipeURLQueue[i]);
+//   }
+// } else {
+//   console.log("An empty list");
+// }
+
+// });
 
 // ingredientsList = ['beef', 'onion', 'garlic', 'butter'];
 // searchQ = searchForRecipe(ingredientsList)
@@ -202,13 +238,13 @@ function getJSON(url, cb) {
 // console.log("Url: " + searchQ);
 // getJSON(searchQ, function(get) {
 //   get.matches.forEach(function (recipe) {
-    // obj = JSON.stringify(recipe.id);
-    // console.log(recipe.id);
-    // console.log(recipe.ingredients);
-    // recipeIDQueue.push(recipe.id);
-  // });
-  //
-  // console.log("Number of recipes: " + recipeIDQueue.length);
+// obj = JSON.stringify(recipe.id);
+// console.log(recipe.id);
+// console.log(recipe.ingredients);
+// recipeIDQueue.push(recipe.id);
+// });
+//
+// console.log("Number of recipes: " + recipeIDQueue.length);
 // });
 
 // ingredientsList = ['salmon', 'mushroom', 'spinach', 'butter'];
@@ -232,24 +268,10 @@ function getJSON(url, cb) {
 
 
 
+
+// Function that will recieve a recipeURL and return detailed info about recipe (JSON)
+// uses recipe endpoint
 // TODO: figure out how to send input, sending to console is temporary
-function getRecipeInfo (urlList) {
-
-  if (Array.isArray(urlList)) {
-    let recipeInfoUrl = [];
-    for (var i = 0; i < urlList.length; i++) {
-      recipeInfoUrl[i] = getJSON(urlList[i], function (get) {
-        return get.source.sourceRecipeUrl;
-        //console.log(recipeInfoUrl);
-      });
-    }
-    return recipeInfoUrl;
-    //console.log(recipeInfoUrl);
-  }
-  //return recipeInfoUrl;
-}
-
-// Builds recipe url for the recipe endpoint
 function getRecipeInfo(urlList) {
   if (Array.isArray(urlList)) {
     for (var i = 0; i < urlList.length; i++) {
@@ -268,7 +290,6 @@ function getRecipeURLs(input) {
   if (Array.isArray(input)) {
     for (var i = 0; i < input.length; i++) {
       url = Config.endpoints.recipeUrl;
-      url = Config.endpoints.recipeUrl;
       url += input[i];
       url += appQuery;
       recipeUrlQueue.push(url);
@@ -276,7 +297,6 @@ function getRecipeURLs(input) {
   }
 
   else if (typeof input === 'string') {
-    url = Config.endpoints.recipeUrl;
     url = Config.endpoints.recipeUrl;
     url += input;
     url += appQuery;
@@ -291,13 +311,6 @@ function getRecipeURLs(input) {
 
 }
 
-function search(ingList, maxRes, cuisine) {
-  var ingredientsList = ingList;
-  var searchQ = searchForRecipe(ingredientsList)
-    .requiredIngredients(ingredientsList)
-    .maxResults(maxRes)
-    .requiredCuisines(cuisine)
-    .getURL();
-  return searchQ;
-}
-
+// recipeIDQueue = ['Southern-Chicken-and-Corn-Chowder-1067232', 'Roasted-Garlic_potato-Soup-My-Recipes', 'Turkey-Meatloaf-2505129'];
+// recipeUrlQueue = getRecipeURLs(recipeIDQueue);
+// getRecipeInfo(recipeUrlQueue);

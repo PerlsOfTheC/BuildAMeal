@@ -157,7 +157,7 @@ function displayBanner(testCase) {
   createFinalResultFilter();
   document.getElementById("bannerIngredients").innerHTML = ingList;
   document.getElementById("bannerFilters").innerHTML = filterList;
-  // document.getElementById("sortByList").selectedIndex = "0"; // 
+  // document.getElementById("sortByList").selectedIndex = "0"; //
   document.getElementById("finalRecipes").innerHTML = ""; // Clears recipes from last generation
   var horz = document.createElement("HR");
   horz.style.width = "97%";
@@ -580,6 +580,96 @@ function display() {
           displayBanner(testThree);
   }else {
     console.log("count==else: " +count)
+    let testOne = [
+      //recipe1
+      'https://thecozyapron.com/st-patricks-favorite-guinness-beef-stew-the-perfect-excuse-to-add-a-bit-of-merriment-lightness/',
+      'https://lh3.googleusercontent.com/37jcRnbO05tCplK-mP6-qDUvN1fp6uK0g_fLfJV-kERBBeS-hVqZVh5BsPaU9mhBhWf6zmoqZcb94nScAbLcFw=s360-c',
+      "St. Patrick's Favorite Guinness Beef Stew with Potatoes, Rich Caramelized Onions & Cabbage, topped with Melty Garlic-Cheese Toast",
+      'beef stew meat,salt,black pepper,flour,canola oil,onions,guinness,herbs de provence,' +
+      'granulated onion,granulated garlic,garlic,russet potatoes,cabbage,beef stock,flat leaf parsley,' +
+      'rice vinegar,toasts,gouda,melted butter,French baguette,garlic clove',
+      '25 min',
+      '4',
+
+      //recipe2
+      'http://livingthegourmet.com/2015/10/bumble-bee-superfresh-meals.html',
+      'https://lh3.googleusercontent.com/i061FnHKYvdl5j_mvMqCfTyGr3pmNRm2Nc29vFXsFXgMDtTQ8rw3sefs7qVEFGAsoYpFQyhTK-69bqF8eR8D=s360-c',
+      'Tilapia with Apricots & Wild Rice','tilapia,wild rice,dried '+
+      'apricots,button mushrooms,butter,olive oil,salt,black pepper,'+
+      'lemon,honey,fresh ground black pepper,salmon,baby spinach,'+
+      'garlic,linguine','25 min','4',
+
+      //recipe3
+      'https://www.fromvalerieskitchen.com/irish-colcannon-potatoes/',
+      'https://lh3.googleusercontent.com/jK0x_EmS784JI2oiqyVqRuXLSMPyyWWz9A2ocIJjCQNJRT0d3mp-QrUQs6Ny1HYtS3JUWjGjfPcB2eNypr1N=s360',
+      'Irish Colcannon Potatoes','red skinned potatoes,salt,butter,minced garlic,' +
+      'green cabbage,fresh ground black pepper,milk,' +
+      'onion powder,bacon,green onions','55 min','4',
+
+      //recipe4
+      'http://www.wholefoodsmarket.com/recipe/salmon-wellington"},"id":"Salmon-Wellington-1462263',
+      'https://lh3.googleusercontent.com/UrYRQdHn55js3d4DMTjUG_XKZLoEvQZ_ld4_uhNdcuvYscifj4Lq8xX63xzJ8abrPlnmcmnqIX4QQGlwh-dzfQ8=s360-c',
+      'Salmon Wellington','unsalted butter,mushrooms,shallots,fine sea' +
+      ' salt,freshly ground pepper,chopped fresh thyme,spinach,frozen puff '+
+       'pastry,skinless salmon fillet,dry red wine,large egg','80 min','3',
+
+      //recipe5
+      'http://www.tablespoon.com/recipes/salmon-mushroom-spinach-bake/cfb513da-63ae-439e-8d08-a6c34f14d2ee',
+      'https://lh3.googleusercontent.com/Gp18kNapshQqX4z10NeXQ3Y38FsAGsQlSkCy0htAUzaNNOH1Bo-q0O_vqLQOkNmFQd_zreOeX4cApUhdedvqzQ=s360-c',
+      'Salmon-Mushroom-Spinach Bake','skinless salmon fillets,butter'+
+      ',panko,Italian flat leaf parsley,fresh thyme leaves,sweet onion'+
+      ',salt,ground black pepper,white mushrooms,baby spinach','55 min','3',
+
+      //recipe6
+      'https://www.tasteaholics.com/recipes/paleo/pan-seared-salmon-with-sauteed-mushrooms-spinach/',
+      'https://lh3.googleusercontent.com/24Zqm7yuX-Hd4MDOeNEa6bJwADt4BR2UzM3VIFzUT67NZ2BAzQKm4HXtZvnmfiHNZ92xtUf_qSgmdzo185WjvmA=s360-c',
+      'Seared Salmon with Sauteed Spinach & Mushrooms','olive oil,'+
+      'garlic,mushrooms,butter,Campari tomatoes,spinach,salt,pepper,'+
+      'balsamic vinegar,salmon fillets','30 min','4',
+
+      //recipe7
+      'https://sweetcsdesigns.com/garlic-butter-parmesan-meatballs/',
+      'https://lh3.googleusercontent.com/5hIyI8pg1lj3Mh1oQxzgKLYUYn81HQW3uxqBN1EXQTXjB6Xu-EFC4ZmVT4E0ldakQiCMb7TE8pRrpPJlegiGSA=s360-c',
+      'Garlic Butter Parmesan Meatballs',
+      'meatballs,ground pork,ground Italian sausage,minced onion,minced garlic,celery,' +
+      'egg,sauce,butter,garlic,beef stock,salt,pepper,grated parmesan cheese',
+      '25 min',
+      '4',
+
+
+      //recipe8
+      'https://www.halfbakedharvest.com/authentic-canadian-poutine/',
+      'https://lh3.googleusercontent.com/9yYw_HXGXtj5U6TFWLeYsFAndZyRAl3E8asy4v9hg9n7KeH4idGZ9juuf5H74o8M1ESrnKgtILgpcQOeYKZNgw=s360-c',
+      'Authentic Canadian Poutine',
+      'russet potatoes,beers,unsalted butter,flour,shallot,garlic,low sodium beef stock,stout beer,' +
+      'ketchup,balsamic vinegar,worcestershire sauce,salt,pepper,canola oil,cheese curds',
+      '20 min',
+      '4',
+
+
+      //recipe9
+      'https://www.cookingclassy.com/creamy-potato-soup/"},"id":"Creamy-Potato-Soup-2225700',
+      'https://lh3.googleusercontent.com/m8vW7HTsL0b0-a5VWEyAbkjB_P-zjql_XgdQ3zcs0UcmYezm-WZerWnvEM7eZCW3WC855QSnoZL5Iwe7vWgE=s360',
+      'Creamy Potato Soup','russet potatoes,yellow onion,carrots,diced celery,' +
+      'low sodium chicken broth,salt,' +
+      'freshly ground black pepper,butter,flour,' +
+      'milk,sour cream,crumbled bacon,' +
+      'shredded cheddar cheese,green onions','60 min','4',
+
+
+      //recipe10
+      'https://www.halfbakedharvest.com/surf-turf-steak-lobster-spicy-roasted-garlic-chimichurri-butter/',
+      'https://lh3.googleusercontent.com/dA6mN4ThsDls4E77lswTI31xpsaXM6B6Wxfn2foHekUY4Yng_6LcDAULdMwAg-xJwfTr3Zy-0MdyWoOXbo5ldA=s360-c',
+      'Steak and Lobster with Spicy Roasted Garlic Chimichurri Butter',
+      'lobster tails,ribeye steaks,salt,pepper,paprika,ground coriander,brown sugar,garlic,' +
+      'cayenne pepper,olive oil,french fries,roasted garlic,unsalted butter,shallot,anchovy fillet,' +
+      'seed,fresh cilantro,fresh parsley,fresh oregano,kosher salt',
+      '25 min',
+      '4',
+
+    ];
+
+    displayBanner(testOne);
   }
 
 }

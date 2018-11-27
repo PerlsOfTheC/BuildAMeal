@@ -28,11 +28,9 @@ async function insert(user) {
 function saveRecipes(user, url) {
   let usr = new User(user);
   usr.myRecipes.push(url)
-  usr.save((item => { console.log('Recipe saved!'); });
 }
 
 function deleteRecipes(user, url) {
   let usr = new User(user);
   usr.myRecipes.pop(url)
-  usr.save((item => { console.log('Recipe removed!'); });
 }

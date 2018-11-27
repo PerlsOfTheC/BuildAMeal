@@ -72,11 +72,11 @@ ul.checkbox  {
   margin-left: 5px;
 }
 ul li{
- font-size:14px;
- display:inline-block;
+  font-size:14px;
+  display:inline-block;
 }
 ul:hover li{
-    cursor: pointer;
+  cursor: pointer;
 }
 .checkbox {
   display: flex;
@@ -161,7 +161,7 @@ input[type=text] {
   margin-left: -60px;
 }
 .tooltip:hover .tooltiptext {
-    visibility: visible;
+  visibility: visible;
 }
 
 /*---------- filtersOn textbox ----------*/
@@ -214,14 +214,14 @@ input[type=text] {
   margin: 0px 5%;
 }
 .accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
 .active:after {
-    content: "\2212";
+  content: "\2212";
 }
 .panel {
   margin-left: 5%;

@@ -580,7 +580,7 @@ function display() {
           displayBanner(testThree);
   }else {
     console.log("count==else: " +count)
-    let testOne = [
+    let testFour = [
       //recipe1
       'https://thecozyapron.com/st-patricks-favorite-guinness-beef-stew-the-perfect-excuse-to-add-a-bit-of-merriment-lightness/',
       'https://lh3.googleusercontent.com/37jcRnbO05tCplK-mP6-qDUvN1fp6uK0g_fLfJV-kERBBeS-hVqZVh5BsPaU9mhBhWf6zmoqZcb94nScAbLcFw=s360-c',
@@ -669,7 +669,7 @@ function display() {
 
     ];
 
-    displayBanner(testOne);
+    displayBanner(testFour);
   }
 
 }

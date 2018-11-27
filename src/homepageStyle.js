@@ -1,4 +1,3 @@
-
 var resultFilter = []; // the displayed filters
 var finalResultFilter = [];  // the filters with proper searchID
 
@@ -144,8 +143,8 @@ function createFinalResultFilter() {
   console.log(finalResultFilter);
 }
 function displayBanner() {
-  const yummly = require('./yummly.js');
-  
+
+
   var ing = ("\xa0\xa0\xa0Showing results for: \xa0").bold();
   var filter = ("\xa0\xa0\xa0Filters applied: \xa0").bold();
   var ingList = ing + resultIngredients.join(', ');
@@ -301,6 +300,8 @@ function displayBanner() {
     table.appendChild(row);
     div.appendChild(table);
     container.appendChild(div);
+
+
   }
 }
 
@@ -309,4 +310,6 @@ function sort() {
   sortingType = document.getElementById("sortByList").selectedIndex;
   // x = Sort by method (0 = alphabetical, 1 = by rating; 2 = Prep Time (low to high))
 }
+
+
 

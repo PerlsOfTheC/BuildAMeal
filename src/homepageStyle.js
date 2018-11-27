@@ -323,7 +323,7 @@ function display() {
   if(count == 1){
     //MILK POTATOES ONIONS
     console.log("count==1: " +count)
-    var testOne = [
+    let testOne = [
       //recipe1
       'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
       'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
@@ -396,7 +396,104 @@ function display() {
   }else if (count == 2){
     console.log("count==2: " +count)
     //var testTwo
-    //displayBanner(testTwo);
+    let testTwo = [
+      // recipe1
+      'https://sweetcsdesigns.com/garlic-butter-parmesan-meatballs/',
+      'https://lh3.googleusercontent.com/5hIyI8pg1lj3Mh1oQxzgKLYUYn81HQW3uxqBN1EXQTXjB6Xu-EFC4ZmVT4E0ldakQiCMb7TE8pRrpPJlegiGSA=s360-c',
+      'Garlic Butter Parmesan Meatballs',
+      'meatballs,ground pork,ground Italian sausage,minced onion,minced garlic,celery,' +
+      'egg,sauce,butter,garlic,beef stock,salt,pepper,grated parmesan cheese',
+      '25 min',
+      '4',
+
+      // recipe2
+      'https://tatyanaseverydayfood.com/recipe-items/thanksgiving-turkey/',
+      'https://lh3.googleusercontent.com/Q91aAYBeVBHgq7Wk1R7Ux55TtSfmBkDY0m7K9uPeBTyrSWrmxWUTLMMs37o39GCtKf0xv-83tso54J3H3CWF=s360-c',
+      'Garlic Butter Thanksgiving Turkey With Gravy',
+      'turkey,unsalted butter,salt,smoked paprika,dried basil,dried oregano,dried thyme,garlic powder,' +
+      'onion powder,ground black pepper,lemons,oranges,shallots,garlic,fresh thyme,rosemary,butter,' +
+      'chicken broth,gravy,flour,turkey drippings,pepper',
+      '20 min',
+      '4',
+
+      // recipe3
+      'https://www.halfbakedharvest.com/surf-turf-steak-lobster-spicy-roasted-garlic-chimichurri-butter/',
+      'https://lh3.googleusercontent.com/dA6mN4ThsDls4E77lswTI31xpsaXM6B6Wxfn2foHekUY4Yng_6LcDAULdMwAg-xJwfTr3Zy-0MdyWoOXbo5ldA=s360-c',
+      'Steak and Lobster with Spicy Roasted Garlic Chimichurri Butter',
+      'lobster tails,ribeye steaks,salt,pepper,paprika,ground coriander,brown sugar,garlic,' +
+      'cayenne pepper,olive oil,french fries,roasted garlic,unsalted butter,shallot,anchovy fillet,' +
+      'seed,fresh cilantro,fresh parsley,fresh oregano,kosher salt',
+      '25 min',
+      '4',
+
+      // recipe4
+      'http://ourlifetastesgood.blogspot.com/2014/06/beef-short-rib-sandwich-sundaysupper.html',
+      'http://lh3.googleusercontent.com/ppOEO2g7HwfbJBypRo1fhL-oXHO-N73YStq937cH8pf6Xsymmp1DyhjH7P0jyMFWRDv--LKO00WWXnFwEtWHIA=s360-c',
+      'Beef Short Rib Sandwiches #SundaySupper',
+      'beef short ribs,kosher salt,ground black pepper,all purpose flour,olive oil,unsalted butter,onion,' +
+      'minced garlic,guinness,beef base,hot water,butter,salt,yellow onions,fontina cheese',
+      '30 min',
+      '3',
+
+      // recipe5
+      'http://www.wickedstuffed.com/recipe/wicked-good-dijon-steak-cheese/',
+      'https://lh3.googleusercontent.com/KIn6_68mfV-CoDziW4tYMKNryxrP0ztS-c0aSF_xDphr4cGur7yUVo2Y9ODyPNrbdJBgslILRkhBbkT1FjCB_l0=s360-c',
+      'Wicked Good Dijon Steak & Cheese',
+      'shaved steak,onions,green peppers,minced garlic,ghee,olive oil,mayonnaise,' +
+      'dijon mustard,slices american cheese',
+      '30 min',
+      '4',
+
+      // recipe6
+      'https://www.halfbakedharvest.com/authentic-canadian-poutine/',
+      'https://lh3.googleusercontent.com/9yYw_HXGXtj5U6TFWLeYsFAndZyRAl3E8asy4v9hg9n7KeH4idGZ9juuf5H74o8M1ESrnKgtILgpcQOeYKZNgw=s360-c',
+      'Authentic Canadian Poutine',
+      'russet potatoes,beers,unsalted butter,flour,shallot,garlic,low sodium beef stock,stout beer,' +
+      'ketchup,balsamic vinegar,worcestershire sauce,salt,pepper,canola oil,cheese curds',
+      '20 min',
+      '4',
+
+      // recipe7
+      'https://thecozyapron.com/st-patricks-favorite-guinness-beef-stew-the-perfect-excuse-to-add-a-bit-of-merriment-lightness/',
+      'https://lh3.googleusercontent.com/37jcRnbO05tCplK-mP6-qDUvN1fp6uK0g_fLfJV-kERBBeS-hVqZVh5BsPaU9mhBhWf6zmoqZcb94nScAbLcFw=s360-c',
+      "St. Patrick's Favorite Guinness Beef Stew with Potatoes, Rich Caramelized Onions & Cabbage, topped with Melty Garlic-Cheese Toast",
+      'beef stew meat,salt,black pepper,flour,canola oil,onions,guinness,herbs de provence,' +
+      'granulated onion,granulated garlic,garlic,russet potatoes,cabbage,beef stock,flat leaf parsley,' +
+      'rice vinegar,toasts,gouda,melted butter,French baguette,garlic clove',
+      '25 min',
+      '4',
+
+      // recipe8
+      'https://www.halfbakedharvest.com/coffee-rubbed-prime-rib-roast-roasted-garlic-gorgonzola-butter/',
+      'http://lh5.ggpht.com/-mvRcb0S3qb_vBVS1V8FKwh0xAuA_Cz94lpD45DRka5d_t-Ep_dpqwpyJvdGKcIPV-eVO0Tjaimk8HzCPiOU=s360-c',
+      'Coffee Rubbed Prime Rib Roast with Roasted Garlic Gorgonzola Butter',
+      'rib roast,coffee,brown sugar,smoked paprika,chili powder,ginger,vanilla bean seeds,' +
+      'black pepper,coarse salt,root vegetables,onion,garlic,unsalted butter,gorgonzola cheese,' +
+      'worchestire sauce,salt,pepper,garlic cloves',
+      '10 min',
+      '4',
+
+      // recipe9
+      'https://thecozyapron.com/st-patricks-favorite-guinness-beef-stew-the-perfect-excuse-to-add-a-bit-of-merriment-lightness/',
+      'https://lh3.googleusercontent.com/37jcRnbO05tCplK-mP6-qDUvN1fp6uK0g_fLfJV-kERBBeS-hVqZVh5BsPaU9mhBhWf6zmoqZcb94nScAbLcFw=s360-c',
+      "St. Patrick's Favorite Guinness Beef Stew with Potatoes, Rich Caramelized Onions & Cabbage, topped with Melty Garlic-Cheese Toast",
+      'beef stew meat,salt,black pepper,flour,canola oil,onions,guinness,herbs de provence,' +
+      'granulated onion,granulated garlic,garlic,russet potatoes,cabbage,beef stock,flat leaf parsley,' +
+      'rice vinegar,toasts,gouda,melted butter,French baguette,garlic clove',
+      '25 min',
+      '4',
+
+      // recipe10
+      'http://thepioneerwoman.com/cooking/drip-beef-two-ways/',
+      'http://lh4.ggpht.com/nV0AvZ4WyWGWb4NOy1bmxOTOI9xvJro2ln-2QaPjNcHFlK8m0jcvQPPr89pI0qmY-y8968XYP1eJZMsLgV8KiQ=s360-c',
+      'Italian Drip Beef',
+      'chuck roast,beef consomme,italian seasoning,salt,water,peppers,deli rolls,butter,onion,garlic,' +
+      'soy sauce,sherry,spices,thyme,rosemary',
+      '5 min',
+      '5',
+    ];
+    displayBanner(testTwo);
+
   }else if (count == 3){
     console.log("count==3: " +count)
     //var testThree

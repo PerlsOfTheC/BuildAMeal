@@ -8,6 +8,10 @@ var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
 
+var count =0;
+
+
+
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -142,9 +146,10 @@ function createFinalResultFilter() {
   }
   console.log(finalResultFilter);
 }
-function displayBanner() {
 
 
+
+function displayBanner(testCase) {
   var ing = ("\xa0\xa0\xa0Showing results for: \xa0").bold();
   var filter = ("\xa0\xa0\xa0Filters applied: \xa0").bold();
   var ingList = ing + resultIngredients.join(', ');
@@ -162,6 +167,7 @@ function displayBanner() {
   var container = document.getElementById("finalRecipes");
   var div, table, row, left, a, pic, right;
   var row1, linkText, p, row2, italicize, row2P, bold, boldText, row2Data, row3;
+
 
   for (i = 0; i < 10; i++) {
     // White rectangle
@@ -186,14 +192,14 @@ function displayBanner() {
     left = document.createElement("TD");
     left.style.width = '20%';
     a = document.createElement('a');
-    a.setAttribute('href','https://coderanch.com/t/120597/languages/javascript-open-window');
+    a.setAttribute('href', testCase[i*6]); //SOURCEURL
     a.setAttribute('target', '_blank');
     pic = document.createElement('img');
-    pic.setAttribute('src','https://lh3.googleusercontent.com/VT-PqxMMsA2wPy7kzmuKGDIzaA3AGuXKExqnfOfwTEy5AvLIMTranbfNGheRr457RD4=s180');
+    pic.setAttribute('src',testCase[(i*6)+1]); //IMAGEURL  recipeNum[1
     pic.style.objectFit = "cover";
     pic.style.margin = "1vh";
     pic.style.height = "16vh";
-    pic.style.width = "16vh";
+    pic.style.width = "20vh";
     pic.style.maxWidth = "100%";
     pic.style.maxHeight = "100%";
     left.style.textAlign = "center";
@@ -211,9 +217,9 @@ function displayBanner() {
     row1.style.height = "4vh";
     row1.style.borderLeft = "5px dotted orange";
     row1.style.paddingLeft = "5px";
-    linkText = document.createTextNode("Recipe Ncipe ipe Ncipe Namee Recipe Ncippe Name");
+    linkText = document.createTextNode(testCase[(i*6)+2]); //NAME
     a = document.createElement('a');
-    a.setAttribute('href','https://coderanch.com/t/120597/languages/javascript-open-window');
+    a.setAttribute('href',testCase[(i*6)]); //SOURCEURL
     a.setAttribute('target', '_blank');
     a.appendChild(linkText);
     a.title = "Recipe Name";
@@ -243,8 +249,7 @@ function displayBanner() {
     row2P.style.height = "2vh";
     bold = document.createElement('strong');
     boldText = document.createTextNode("INGREDIENTS: ");
-    row2Data = document.createTextNode("HElHEll oHElloHEll oHElloHElloHEl loHElloHEl loHElloH ElloHElHE lloHElloHEllo HElloH ElloH ElloHElloH  loHElloH ElloHElHE lloHElloHEllo HElloH ElloH ElloHElloH  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo  loHElloHEl loHElloH ElloHElHE lloHElloHEllo ");
-    row2P.style.marginRight = "10px";
+    row2Data = document.createTextNode(testCase[(i*6)+3]); //INGRIENDTS
     row2P.style.verticalAlign = "middle";
     row2P.style.color = "grey";
     row2.style.textOverflow = "ellipsis";
@@ -265,7 +270,7 @@ function displayBanner() {
     row3A = document.createElement("div");
     bold = document.createElement('strong');
     boldText = document.createTextNode("COOKING TIME: ");
-    row3AData = document.createTextNode("min");
+    row3AData = document.createTextNode(testCase[(i*6)+4]); //COOKING TIME
     row3A.style.padding = "0vh 10vh 0px 0px";
     row3A.style.height = "3vh";
     row3A.style.width = "50%";
@@ -279,7 +284,7 @@ function displayBanner() {
     row3B = document.createElement("div");
     bold = document.createElement('strong');
     boldText = document.createTextNode("RATING: ");
-    row3BData = document.createTextNode("3.5");
+    row3BData = document.createTextNode(testCase[(i*6)+5]); //RATING
     row3B.style.height = "3vh";
     row3B.style.padding = "0vh 10vh 0px 10px";
     row3B.style.width = "50%";
@@ -300,10 +305,9 @@ function displayBanner() {
     table.appendChild(row);
     div.appendChild(table);
     container.appendChild(div);
-
-
   }
 }
+
 
 
 function sort() {
@@ -311,5 +315,109 @@ function sort() {
   // x = Sort by method (0 = alphabetical, 1 = by rating; 2 = Prep Time (low to high))
 }
 
+
+function display() {
+  count += 1;
+
+  //sourceURL,imageURL,name,ingridents,time,rating
+  if(count == 1){
+    //MILK POTATOES ONIONS
+    console.log("count==1: " +count)
+    var testOne = [
+      //recipe1
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe2
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe3
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe4
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe5
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe6
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe7
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe8
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe9
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4',
+
+      //recipe10
+      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
+      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
+      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
+      'flour,chicken stock,milk,kosher salt,black pepper,' +
+      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
+      'grated parmesan cheese','80 min','4'
+    ];
+
+    displayBanner(testOne);
+  }else if (count == 2){
+    console.log("count==2: " +count)
+    //var testTwo
+    //displayBanner(testTwo);
+  }else if (count == 3){
+    console.log("count==3: " +count)
+    //var testThree
+    //displayBanner(testThree);
+  }else {
+    console.log("count==else: " +count)
+  }
+
+}
 
 

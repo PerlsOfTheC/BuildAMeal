@@ -333,76 +333,63 @@ function display() {
       'grated parmesan cheese','80 min','4',
 
       //recipe2
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.centercutcook.com/loaded-baked-potato-casserole/',
+      'https://lh3.googleusercontent.com/mwHiiq9DHQ4HV09wJGprJPDEj_FgMA0DrkEqWk6WGtyzqnENQgUxJHr0WmWWu4l7ckwx8nz9gmi1hEFew5_y3Tg=s360',
+      'Loaded Baked Potato Casserole','yukon gold potatoes,water,potatoes,cream cheese,butter,' +
+      'sour cream,milk,kosher salt,black pepper,' +
+      'garlic powder,sharp cheddar cheese,bacon,green onions','60 min','4',
 
       //recipe3
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.fromvalerieskitchen.com/irish-colcannon-potatoes/',
+      'https://lh3.googleusercontent.com/jK0x_EmS784JI2oiqyVqRuXLSMPyyWWz9A2ocIJjCQNJRT0d3mp-QrUQs6Ny1HYtS3JUWjGjfPcB2eNypr1N=s360',
+      'Irish Colcannon Potatoes','red skinned potatoes,salt,butter,minced garlic,' +
+      'green cabbage,fresh ground black pepper,milk,' +
+      'onion powder,bacon,green onions','55 min','4',
 
       //recipe4
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.cookingclassy.com/creamy-potato-soup/"},"id":"Creamy-Potato-Soup-2225700',
+      'https://lh3.googleusercontent.com/m8vW7HTsL0b0-a5VWEyAbkjB_P-zjql_XgdQ3zcs0UcmYezm-WZerWnvEM7eZCW3WC855QSnoZL5Iwe7vWgE=s360',
+      'Creamy Potato Soup','russet potatoes,yellow onion,carrots,diced celery,' +
+      'low sodium chicken broth,salt,' +
+      'freshly ground black pepper,butter,flour,' +
+      'milk,sour cream,crumbled bacon,' +
+      'shredded cheddar cheese,green onions','60 min','4',
 
       //recipe5
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.spendwithpennies.com/scalloped-potatoes-recipe/',
+      'https://lh3.googleusercontent.com/IbOcfJCiYvaq1_LvLX6dIy0yic5w50r6U5vL1Gp3HEJfGBteRwONmQr0mB7s0Mi-YRoEZS8CH0BP3DdKEYXP=s360',
+      'Scalloped Potatoes','butter,onion,garlic,flour,milk,chicken broth,salt,pepper,potatoes','85 min','4',
 
       //recipe6
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.canadianliving.com/food/lunch-and-dinner/recipe/classic-scalloped-potatoes',
+      'https://lh3.googleusercontent.com/JlnJfttTNM1fQThtOENIRBfFVVGSH6lU_5QlSlJnTN5ESrQK6sf0YKM8vFIliewAXWl4_eM_ajJ7iUPPYbt_=s360',
+      'Classic Scalloped Potatoes','butter,garlic,all-purpose flour,' +
+      'chopped fresh thyme,salt,pepper,milk,' +
+      'yukon gold potatoes,small onion','105 min','3',
 
       //recipe7
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.bettycrocker.com/recipes/scalloped-potatoes/328145a6-db72-4258-b545-0589655fe23d',
+      'https://lh3.googleusercontent.com/skhFEwvppgXofdl2a70B9QbT98LKyO3yG1yZA4mkRAiThubVNgCRm5mEg2trncPFwPUwcek25TfHn8Kx82MM=s360',
+      'Scalloped Potatoes','butter,onion,all purpose flour,salt,pepper,milk,potatoes','125 min','3',
 
       //recipe8
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.awickedwhisk.com/twice-baked-potatoes/',
+      'https://lh3.googleusercontent.com/w2SoglgHiLl6Bj-GdjVYsxykQvKEpRAb9Xr3HM3VyIHlTQ_26fMv1C-nGOPZO0p8A4tx89OLIUomSq_ccJsyXA=s36',
+      'Quick Twice Baked Potatoes','russet potatoes,butter,shredded cheddar cheese,bacon,' +
+      'green onions,sour cream,milk,salt,pepper','70 min','3',
 
       //recipe9
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4',
+      'https://www.thekitchn.com/recipe-baked-potato-soup-with-bacon-scallions-cheddar-136303',
+      'https://lh3.googleusercontent.com/XlUo_qOtKHKR3VanKkTRe6tKrRfqNXjQ5A4SDo1ALJPbN04DbXkyxTrIKleOVx7WfVDRPMOhmCn2kiKSqlNYZA=s360',
+      'Baked Potato Soup With Bacon, Green Onion & Cheddar','unsalted butter,flour,whole milk,l' +
+      'arge potatoes,bacon,shredded cheddar cheese,' +
+      'sour cream,green onions,kosher salt,' +
+      'ground black pepper,garlic,grated parmesan cheese','35 min','4',
 
       //recipe10
-      'https://lh3.googleusercontent.com/uIh8XfyeGavRAfWLCrV3XO51ApPVJjuVPIW0-GItZ0Cm83nFUudkkOoy3DPw_OjieYlowLCjMTgtqoAReVNFwQ=s360',
-      'https://www.gimmesomeoven.com/scalloped-potatoes-recipe/',
-      'Scalloped Potatoes','butter,yellow onion,large garlic cloves,' +
-      'flour,chicken stock,milk,kosher salt,black pepper,' +
-      'fresh thyme leaves,yukon gold potatoes,sharp cheddar cheese,' +
-      'grated parmesan cheese','80 min','4'
+      'https://realmomkitchen.com/96/cheesy-scalloped-potatoes/',
+      'https://lh3.googleusercontent.com/UFNpDz7t8CqAjImlKQF_7R3fwv0awoyjcc0MTgelLgWObxotrsF949wBsJHRiXfh4Wdk2V865eJpqgxHWKKx1g=s360',
+      'Cheesy Scalloped Potatoes','chopped onion,butter,flour,milk,salt,shredded cheese,medium potatoes','85 min','4'
     ];
 
     displayBanner(testOne);

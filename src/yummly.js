@@ -171,7 +171,7 @@ exports.searchForRecipe = function searchForRecipe(ingredientList) {
     }
   }
 
-}
+};
 
 // TODO: Add timeout
 function getJSON(url, cb) {
@@ -308,9 +308,60 @@ function getRecipeURLs(input) {
   } else {
     return null;
   }
-
 }
 
 // recipeIDQueue = ['Southern-Chicken-and-Corn-Chowder-1067232', 'Roasted-Garlic_potato-Soup-My-Recipes', 'Turkey-Meatloaf-2505129'];
 // recipeUrlQueue = getRecipeURLs(recipeIDQueue);
 // getRecipeInfo(recipeUrlQueue);
+
+console.log("Whoever's ingredient list");
+ingredientsList = ['beef', 'onion', 'garlic', 'butter'];
+searchQ = searchForRecipe(ingredientsList)
+  .requiredIngredients(ingredientsList)
+  .maxResults(10)
+  .requiredCourses("Main Dishes")
+  .maxRecipeTime(1800)
+  .getURL();
+
+let recipeIDQ = [];
+getJSON(searchQ, function(get) {
+  get.matches.forEach(function(recipe) {
+    console.log("Recipe name: " + recipe.recipeName);
+    console.log("Recipe ingredients: " + recipe.ingredients);
+    console.log("Recipe time: " + recipe.totalTimeInSeconds);
+    console.log("Recipe rating:  " + recipe.rating + '\n\n');
+    recipeIDQ.push(recipe.id);
+  });
+
+  let recipeUrlQ = getRecipeURLs(recipeIDQ);
+
+  for (let i = 0; i < recipeUrlQ.length; i++) {
+    console.log(recipeUrlQ[i]);
+  }
+});
+
+//----separating the two recipe inputs----------------------------------
+
+console.log("Walt's ingredient list");
+ingredientsList = ['salmon', 'mushroom', 'spinach', 'butter'];
+searchQ = searchForRecipe(ingredientsList)
+  .requiredIngredients(ingredientsList)
+  .maxResults(10)
+  .includedAllergies('395^Tree Nut-Free')
+  .getURL();
+
+getJSON(searchQ, function(get) {
+  get.matches.forEach(function(recipe) {
+    console.log("Recipe name: " + recipe.recipeName);
+    console.log("Recipe ingredients: " + recipe.ingredients);
+    console.log("Recipe time: " + recipe.totalTimeInSeconds);
+    console.log("Recipe rating: " + recipe.rating + '\n\n');
+    recipeIDQueue.push(recipe.id);
+  });
+
+  let recipeUrlQ = getRecipeURLs(recipeIDQueue);
+
+  for (let i = 0; i < recipeUrlQ.length; i++) {
+    console.log(recipeUrlQ[i]);
+  }
+});

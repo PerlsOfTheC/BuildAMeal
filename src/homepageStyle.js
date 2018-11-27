@@ -157,7 +157,7 @@ function displayBanner(testCase) {
   createFinalResultFilter();
   document.getElementById("bannerIngredients").innerHTML = ingList;
   document.getElementById("bannerFilters").innerHTML = filterList;
-  document.getElementById("sortByList").selectedIndex = "0";
+  // document.getElementById("sortByList").selectedIndex = "0"; // 
   document.getElementById("finalRecipes").innerHTML = ""; // Clears recipes from last generation
   var horz = document.createElement("HR");
   horz.style.width = "97%";

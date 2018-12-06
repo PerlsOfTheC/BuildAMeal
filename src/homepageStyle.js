@@ -1,16 +1,12 @@
+var resultIngredients = []; // the displayed Ingredients
 var resultFilter = []; // the displayed filters
 var finalResultFilter = [];  // the filters with proper searchID
-
-var resultIngredients = [];
 var expectedFilter = ["Dairy-Free","Egg-Free","Gluten-Free","Peanut-Free","Seafood-Free", "Sesame-Free","Soy-Free", "Sulfite-Free","Tree Nut-Free","Wheat-Free", "Lacto vegetarian", "Ovo vegetarian", "Pescetarian","Vegan","Lacto-ovo vegetarian"];
 var actualFilter = ["396^Dairy-Free","397^Egg-Free","393^Gluten-Free","394^Peanut-Free","398^Seafood-Free","399^Sesame-Free","400^Soy-Free", "401^Sulfite-Free", "395^Tree Nut-Free","392^Wheat-Free",  "388^Lacto vegetarian", "389^Ovo vegetarian", "390^Pescetarian","387^Lacto-ovo vegetarian"];
 var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
-
-var count =0;
-
-
+var count = 0;
 
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
@@ -35,6 +31,7 @@ $("document").ready(function(){
     });
 });
 
+// Adds ingredient from search bar
 function addToCheckBox() {
   var ul = document.getElementById("ingredientCheckbox");
   var li = document.createElement("li");
@@ -65,6 +62,7 @@ function addToCheckBox() {
   }
 }
 
+// Adds ingredient from selection
 function addIngredient (ingredientID) {
   var filter = document.getElementById(ingredientID).value;
   if (resultIngredients.indexOf(filter) <= -1 && resultIngredients.length<10) {
@@ -135,6 +133,22 @@ function addGenericFilter(filterID) {
   }
 }
 
+function removeAllIngredients() {
+  var ul = document.getElementById("ingredientCheckbox");
+  while (ul.firstChild)
+    ul.removeChild(ul.firstChild);
+  resultIngredients = [];
+}
+
+function removeAllFilters() {
+  var ul = document.getElementById("filterSelection");
+  while (ul.firstChild)
+    ul.removeChild(ul.firstChild);
+  resultFilter = [];
+  timeFilterOn = false;
+  dietFilterOn = false;
+}
+
 function createFinalResultFilter() {
   finalResultFilter = resultFilter.slice(0);
   var i;
@@ -147,9 +161,9 @@ function createFinalResultFilter() {
   console.log(finalResultFilter);
 }
 
-
-
 function displayBanner(testCase) {
+  document.getElementById('rightID').scrollTop = 0;
+
   var ing = ("\xa0\xa0\xa0Showing results for: \xa0").bold();
   var filter = ("\xa0\xa0\xa0Filters applied: \xa0").bold();
   var ingList = ing + resultIngredients.join(', ');
@@ -167,7 +181,6 @@ function displayBanner(testCase) {
   var container = document.getElementById("finalRecipes");
   var div, table, row, left, a, pic, right;
   var row1, linkText, p, row2, italicize, row2P, bold, boldText, row2Data, row3;
-
 
   for (i = 0; i < 10; i++) {
     // White rectangle
@@ -210,6 +223,7 @@ function displayBanner(testCase) {
     right = document.createElement("TD");
     right.style.width = "80%";
 
+    // Row 1: recipe Name
     row1 = document.createElement("div");
     row1.style.marginTop = "-3vh";
     row1.style.fontWeight = "bold";
@@ -240,6 +254,7 @@ function displayBanner(testCase) {
     p.style.textOverflow = "ellipsis";
     p.style.overflow = "hidden";
 
+    // Row 2: list of ingredients
     row2 = document.createElement("div");
     row2.style.marginTop = "1vh";
     row2.style.height = "5vh";
@@ -261,16 +276,17 @@ function displayBanner(testCase) {
     row2.append(bold);
     row2.append(italicize);
 
+    // Row 3
     row3 = document.createElement("div");
     row3.style.marginTop = "1vh";
     row3.style.width = "100%";
     row3.style.height = "3vh";
     row3.style.display = "flex";
-
+    // Cooking time
     row3A = document.createElement("div");
     bold = document.createElement('strong');
     boldText = document.createTextNode("COOKING TIME: ");
-    row3AData = document.createTextNode(testCase[(i*6)+4]); //COOKING TIME
+    row3AData = document.createTextNode(testCase[(i*6)+4]); //COOKING TIME ( + " min.")
     row3A.style.padding = "0vh 10vh 0px 0px";
     row3A.style.height = "3vh";
     row3A.style.width = "50%";
@@ -280,11 +296,23 @@ function displayBanner(testCase) {
     row3A.style.fontSize = "2vh";
     row3A.style.textOverflow = "ellipsis";
     row3A.style.overflow = "hidden";
-
+    // Rating
     row3B = document.createElement("div");
     bold = document.createElement('strong');
     boldText = document.createTextNode("RATING: ");
-    row3BData = document.createTextNode(testCase[(i*6)+5]); //RATING
+    var starRating = "";
+    var rating = testCase[(i*6)+5];
+    if (rating != null) {
+      for (var k = 0; k<5; k++) {
+        if (k<rating)
+          starRating+= "\u2605";
+        else
+          starRating+= "\u2606";
+      }
+    }
+    else
+      starRating = "unavailable"
+    row3BData = document.createTextNode(starRating); //RATING
     row3B.style.height = "3vh";
     row3B.style.padding = "0vh 10vh 0px 10px";
     row3B.style.width = "50%";
@@ -308,13 +336,24 @@ function displayBanner(testCase) {
   }
 }
 
-
-
 function sort() {
   sortingType = document.getElementById("sortByList").selectedIndex;
   // x = Sort by method (0 = alphabetical, 1 = by rating; 2 = Prep Time (low to high))
 }
 
+// Displays a button to allow user to scroll up
+function showTopButton() {
+  if (document.getElementById('rightID').scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("upButton").style.display = "block";
+    } else {
+        document.getElementById("upButton").style.display = "none";
+    }
+}
+
+// Scrolls to top of right scroll pane
+function scrollToTop() {
+  document.getElementById('rightID').scrollTop = 0;
+}
 
 function display() {
   count += 1;

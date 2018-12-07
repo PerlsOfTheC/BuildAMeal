@@ -33,7 +33,7 @@
       <!-- Configure the left scroll pane -->
       <div class="left">
         <div style="text-align: center">
-          <button class = "findRecipes" onclick = "display()"><span>Find me recipes! </span></button>
+          <button class = "findRecipes" onclick = "displayBanner()"><span>Find me recipes! </span></button>
         </div>
 
         <!--Ingredients List -->
@@ -239,16 +239,6 @@
         <div class = "bannerBackground">
           <p id = "bannerIngredients" style="margin:5px;"><b> &nbsp&nbsp&nbspShowing results for: </b></p>
           <p id = "bannerFilters" style="margin:5px;"><b> &nbsp&nbsp&nbspFilters applied: </b></p>
-
-          <!-- <p style="margin-left:13px;margin-top:0px">
-            <b>Sort By :</b>
-            <select id="sortByList" class = "sortByFont">
-              <option value="alphabetical" selected="selected">Alphabetical Order</option>
-              <option value="rating">Rating (High to Low)</option>
-              <option value="rating">Prep Time (Low to High)</option>
-            </select>
-            <button onclick="sort()" style = "background-color: grey; border: none; color: white; font-family: Dosis"> OK </button>
-          </p> -->
 
         </div>
         <div id = "finalRecipes"></div>

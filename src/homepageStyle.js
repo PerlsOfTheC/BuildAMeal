@@ -1,12 +1,12 @@
 var resultIngredients = []; // the displayed Ingredients
 var resultFilter = []; // the displayed filters
 var finalResultFilter = [];  // the filters with proper searchID
+var yumlyArray = []; //results from yumly API
 var expectedFilter = ["Dairy-Free","Egg-Free","Gluten-Free","Peanut-Free","Seafood-Free", "Sesame-Free","Soy-Free", "Sulfite-Free","Tree Nut-Free","Wheat-Free", "Lacto vegetarian", "Ovo vegetarian", "Pescetarian","Vegan","Lacto-ovo vegetarian"];
 var actualFilter = ["396^Dairy-Free","397^Egg-Free","393^Gluten-Free","394^Peanut-Free","398^Seafood-Free","399^Sesame-Free","400^Soy-Free", "401^Sulfite-Free", "395^Tree Nut-Free","392^Wheat-Free",  "388^Lacto vegetarian", "389^Ovo vegetarian", "390^Pescetarian","387^Lacto-ovo vegetarian"];
 var timeFilterOn = false;
 var dietFilterOn = false;
 var sortingType;
-var count = 0;
 
 $("document").ready(function() {
   var acc = document.getElementsByClassName("accordion");
@@ -161,7 +161,7 @@ function createFinalResultFilter() {
   console.log(finalResultFilter);
 }
 
-function displayBanner(testCase) {
+function displayBanner(yumlyArray) {
   document.getElementById('rightID').scrollTop = 0;
 
   var ing = ("\xa0\xa0\xa0Showing results for: \xa0").bold();
@@ -205,10 +205,10 @@ function displayBanner(testCase) {
     left = document.createElement("TD");
     left.style.width = '20%';
     a = document.createElement('a');
-    a.setAttribute('href', testCase[i*6]); //SOURCEURL
+    a.setAttribute('href', yumlyArray[i*6]); //SOURCEURL
     a.setAttribute('target', '_blank');
     pic = document.createElement('img');
-    pic.setAttribute('src',testCase[(i*6)+1]); //IMAGEURL  recipeNum[1
+    pic.setAttribute('src',yumlyArray[(i*6)+1]); //IMAGEURL  recipeNum[1
     pic.style.objectFit = "cover";
     pic.style.margin = "1vh";
     pic.style.height = "16vh";
@@ -231,9 +231,9 @@ function displayBanner(testCase) {
     row1.style.height = "4vh";
     row1.style.borderLeft = "5px dotted orange";
     row1.style.paddingLeft = "5px";
-    linkText = document.createTextNode(testCase[(i*6)+2]); //NAME
+    linkText = document.createTextNode(yumlyArray[(i*6)+2]); //NAME
     a = document.createElement('a');
-    a.setAttribute('href',testCase[(i*6)]); //SOURCEURL
+    a.setAttribute('href',yumlyArray[(i*6)]); //SOURCEURL
     a.setAttribute('target', '_blank');
     a.appendChild(linkText);
     a.title = "Recipe Name";
@@ -264,7 +264,7 @@ function displayBanner(testCase) {
     row2P.style.height = "2vh";
     bold = document.createElement('strong');
     boldText = document.createTextNode("INGREDIENTS: ");
-    row2Data = document.createTextNode(testCase[(i*6)+3]); //INGRIENDTS
+    row2Data = document.createTextNode(yumlyArray[(i*6)+3]); //INGRIENDTS
     row2P.style.verticalAlign = "middle";
     row2P.style.color = "grey";
     row2.style.textOverflow = "ellipsis";
@@ -286,7 +286,7 @@ function displayBanner(testCase) {
     row3A = document.createElement("div");
     bold = document.createElement('strong');
     boldText = document.createTextNode("COOKING TIME: ");
-    row3AData = document.createTextNode(testCase[(i*6)+4]); //COOKING TIME ( + " min.")
+    row3AData = document.createTextNode(yumlyArray[(i*6)+4]); //COOKING TIME ( + " min.")
     row3A.style.padding = "0vh 10vh 0px 0px";
     row3A.style.height = "3vh";
     row3A.style.width = "50%";
@@ -301,7 +301,7 @@ function displayBanner(testCase) {
     bold = document.createElement('strong');
     boldText = document.createTextNode("RATING: ");
     var starRating = "";
-    var rating = testCase[(i*6)+5];
+    var rating = yumlyArray[(i*6)+5];
     if (rating != null) {
       for (var k = 0; k<5; k++) {
         if (k<rating)
@@ -354,23 +354,5 @@ function showTopButton() {
 function scrollToTop() {
   document.getElementById('rightID').scrollTop = 0;
 }
-
-function display() {
-  count += 1;
-
-  if(count == 3){
-    displayBanner(testOne);
-  }else if (count == 2){
-
-    displayBanner(testTwo);
-
-  }else if (count == 1){
-
-
-          displayBanner(testThree);
-  }else {
-
-    displayBanner(testFour);
-  }
 
 }
